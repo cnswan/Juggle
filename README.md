@@ -12,7 +12,7 @@
 - 徽章格式：`[![desc](shields-url)](link)`
 - shields格式：`https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg`
 - shields示例：`https://img.shields.io/badge/author-cnswan-ff9600.svg`
-- link:链接地址
+- link:链接地址 [https://github.com/cnswan](https://github.com/cnswan)
 
 #### 下载地址 | APK Download：
 
