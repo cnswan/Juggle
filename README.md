@@ -5,7 +5,8 @@
 [![GitHub issues](https://img.shields.io/github/issues/cnswan/juggle.svg)](https://github.com/cnswan/juggle/issues)&ensp;&ensp;
 [![GitHub forks](https://img.shields.io/github/forks/cnswan/juggle.svg)](https://github.com/cnswan/juggle/network)&ensp;&ensp;
 [![GitHub stars](https://img.shields.io/github/stars/cnswan/juggle.svg)](https://github.com/cnswan/juggle/stargazers)  
-
+[![Version Code](https://img.shields.io/badge/Version%20Code-4-brightgreen.svg)](https://github.com/cnswan)&ensp;&ensp; 
+[![Version Name](https://img.shields.io/badge/Version%20Name-v1.6%20%E6%AD%A3%E5%BC%8F%E7%89%88-blue.svg)](https://github.com/cnswan)&ensp;&ensp; 
 ### shields 徽章 ###
 使用说明：
 
