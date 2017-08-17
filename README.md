@@ -18,6 +18,8 @@
 ### RxJava 使用说明 ###
 - 参考资料：[https://github.com/mcxiaoke/RxDocs](https://github.com/mcxiaoke/RxDocs)
 
+### Tinker 使用说明 ###
+- 参考资料：[https://github.com/Tencent/tinker](https://github.com/Tencent/tinker)
 
 #### 下载地址 | APK Download：
 
