@@ -26,10 +26,10 @@ import io.reactivex.schedulers.Schedulers;
 public class RxJava {
 
     public static void main(String[] args) {
-        //        useRxJavaByConsumer();
-        //        useRxJavaByObserver();
-        //        useRxJavaByMap();
-        //        useRxJavaByFlatMap();
+        useRxJavaByConsumer();
+        useRxJavaByObserver();
+        useRxJavaByMap();
+        useRxJavaByFlatMap();
         useRxJavaByInterval();
         useRxJavaByTimer();
     }
