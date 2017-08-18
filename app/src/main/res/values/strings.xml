@@ -1,5 +1,15 @@
 <resources>
-    <string name="app_name">juggle</string>
+    <!--Application-->
+    <string name="app_name">Juggle</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--MainActivity-->
+    <string name="main_tab_">Main</string>
+
+    <!--RxAndroidActivity-->
+    <string name="rx_android_title">RxJava</string>
+
+    <!--TinkerActivity-->
+    <string name="tinker_title">Tinker</string>
+
 </resources>
