@@ -11,9 +11,11 @@ import com.cnswan.juggle.fragment.PlaceholderFragment;
  * Created by 00013259 on 2017/8/17.
  */
 
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class PagerAdapter extends FragmentPagerAdapter {
 
-    public SectionsPagerAdapter(FragmentManager fm) {
+
+
+    public PagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
