@@ -9,10 +9,14 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile "com.android.support:multidex:1.0.1"
     testCompile 'junit:junit:4.12'
+    compile 'com.google.android:flexbox:0.3.0'
     provided('com.tencent.tinker:tinker-android-anno:1.8.1')
     compile('com.tencent.tinker:tinker-android-lib:1.8.1')
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
 }
 
 def gitSha() {
@@ -66,8 +70,8 @@ android {
         versionCode 1
         versionName "1.0.0"
         multiDexEnabled true
-//        buildConfigField "String", "MESSAGE", "\"I am the base apk\""
-        buildConfigField "String", "MESSAGE", "\"I am the path apk\""
+        buildConfigField "String", "MESSAGE", "\"I am the base apk\""
+//        buildConfigField "String", "MESSAGE", "\"I am the path apk\""
         buildConfigField "String", "TINKER_ID", "\"${getTinkerIdValue()}\""
         buildConfigField "String", "PLATFORM", "\"all\""
     }
