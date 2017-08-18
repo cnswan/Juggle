@@ -1,7 +1,6 @@
 package com.cnswan.juggle.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import com.cnswan.juggle.R;
  * Created by 00013259 on 2017/8/17.
  */
 
-public class PlaceholderFragment extends Fragment {
+public class PlaceholderFragment extends BaseFragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -40,7 +39,6 @@ public class PlaceholderFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-        textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
         return rootView;
     }
 }
