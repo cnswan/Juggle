@@ -3,9 +3,9 @@ package com.cnswan.juggle.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.ViewGroup;
 
-import com.cnswan.juggle.fragment.MainFragment;
-import com.cnswan.juggle.fragment.PlaceholderFragment;
+import java.util.ArrayList;
 
 /**
  * Created by 00013259 on 2017/8/17.
@@ -13,40 +13,39 @@ import com.cnswan.juggle.fragment.PlaceholderFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
+    private ArrayList<Fragment> fragments = new ArrayList<>();
+    private String[] titles;
 
-
-    public PagerAdapter(FragmentManager fm) {
+    public PagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments, String[] titles) {
         super(fm);
-    }
-
-    @Override
-    public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        switch (position) {
-            case 0:
-                return new MainFragment();
-            default:
-                return PlaceholderFragment.newInstance(position + 1);
-        }
+        this.fragments = fragments;
+        this.titles = titles;
     }
 
     @Override
     public int getCount() {
-        // Show 3 total pages.
-        return 3;
+        return fragments.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return "SECTION 1";
-            case 1:
-                return "SECTION 2";
-            case 2:
-                return "SECTION 3";
-        }
-        return null;
+        return titles[position];
     }
+
+    @Override
+    public Fragment getItem(int position) {
+        return fragments.get(position);
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        // 覆写destroyItem并且空实现,这样每个Fragment中的视图就不会被销毁
+        // super.destroyItem(container, position, object);
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return android.support.v4.view.PagerAdapter.POSITION_NONE;
+    }
+
 }
