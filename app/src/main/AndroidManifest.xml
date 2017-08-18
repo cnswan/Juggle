@@ -18,8 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RxAndroidActivity"/>
-        <activity android:name=".activity.TinkerActivity"/>
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/rx_android_title"/>
+        <activity
+            android:name=".activity.FlexBoxActivity"
+            android:label="@string/rx_android_title"/>
+        <activity
+            android:name=".activity.RxAndroidActivity"
+            android:label="@string/rx_android_title"/>
+        <activity
+            android:name=".activity.TinkerActivity"
+            android:label="@string/tinker_title"/>
 
         <service android:name=".service.SampleResultService"/>
     </application>
