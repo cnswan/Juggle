@@ -2,6 +2,17 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="nav_header_height">173dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+
+    <!--电影详情图片的宽高-->
+    <dimen name="movie_detail_width">125dp</dimen>
+    <dimen name="movie_detail_height">165dp</dimen>
+
+
+    <dimen name="nav_bar_height">56dp</dimen>
+    <dimen name="nav_bar_height_more">58dp</dimen>
+
+    <!--渐变时还没到布局全部就已经不透明了，距离 45dp-->
+    <dimen name="base_header_activity_slide_more">45dp</dimen>
 </resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_nav_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/skin_main_bg"
+        android:orientation="vertical"
+        tools:context="com.zx.freetime.ui.menu.NavSettingActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插件式换肤"
+                android:textColor="@color/skin_item_text_color"
+                android:textSize="25sp"/>
+
+            <com.zx.freetime.widget.ZSwitch.SlideSwitch
+                android:id="@+id/changeskin_switch"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                app:shape="circle"
+                app:themeColor="#f200aa96"/>
+            <!--app:isOpen="false"-->
+        </RelativeLayout>
+
+        <View
+            style="@style/horizontalLine"
+            android:layout_marginLeft="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="夜间模式(测试功能)"
+                android:textColor="@color/skin_item_text_color"
+                android:textSize="25sp"/>
+
+            <com.zx.freetime.widget.ZSwitch.SlideSwitch
+                android:id="@+id/night_mode_switch"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                app:isOpen="false"
+                app:shape="circle"
+                app:themeColor="#f200aa96"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/horizontalLine"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/night_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>
+

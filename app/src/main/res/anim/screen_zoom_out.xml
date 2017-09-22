@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator">
+    <scale
+        android:duration="400"
+        android:fromAlpha="0.0"
+        android:fromXScale="1.4"
+        android:fromYScale="1.4"
+        android:pivotX="40%p"
+        android:pivotY="40%p"
+        android:toAlpha="1.0"
+        android:toXScale="1.0"
+        android:toYScale="1.0" />
+
+</set>
+
+
+<!--40%p,表示以当前View的左上角加上父控件宽高的40%做为初始点,但是不要忘了动画显示结束后,其会恢复原貌,所以无所谓...-->

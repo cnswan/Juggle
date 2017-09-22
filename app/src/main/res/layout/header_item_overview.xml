@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+     <com.zx.freetime.widget.ZBanner.ZBanner
+         android:id="@+id/zbanner"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"/>
+
+    <include
+        android:id="@+id/include_everyday"
+        layout="@layout/home_middle_layout"/>
+
+
+</LinearLayout>

@@ -9,10 +9,6 @@ import com.cnswan.juggle.R;
 
 import java.util.List;
 
-/**
- * Created by 00013259 on 2017/8/18.
- */
-
 public class MainAdapter extends BaseQuickAdapter<String, MainAdapter.MainViewHolder> {
 
     public MainAdapter(@Nullable List<String> data) {
