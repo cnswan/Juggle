@@ -4,14 +4,15 @@ import com.cnswan.juggle.bean.chat.ChatBean;
 import com.cnswan.juggle.module.http.RequestImpl;
 import com.cnswan.juggle.module.internal.ChatModel;
 
-import rx.Subscription;
+import io.reactivex.disposables.Disposable;
+
 
 public class ChatPresenter implements ChatContract.Presenter {
 
     private ChatContract.View mView;
     private ChatModel mModel = new ChatModel();
-    private RequestImpl  mRequest;
-    public  Subscription chatSubscription;
+    private RequestImpl mRequest;
+    public  Disposable  mChatDisplsable;
 
 
     public ChatPresenter(ChatContract.View view) {
@@ -19,7 +20,6 @@ public class ChatPresenter implements ChatContract.Presenter {
         mRequest = new RequestImpl() {
             @Override
             public void loadSuccess(Object object) {
-                //NOTE:所有的view中load的参数都是对应的List<item>
                 mView.load((ChatBean) object);
             }
 
@@ -30,13 +30,11 @@ public class ChatPresenter implements ChatContract.Presenter {
 
             @Override
             public void loadComplete() {
-                //mView.showNormalView();
             }
 
             @Override
-            public void addSubscription(Subscription subscription) {
-//                mView.getFragment().addSubscription(subscription);
-                chatSubscription = subscription;
+            public void addSubscription(Disposable disposable) {
+                mChatDisplsable = disposable;
             }
         };
     }
@@ -48,13 +46,13 @@ public class ChatPresenter implements ChatContract.Presenter {
 
     @Override
     public void unSubscribe() {
-        if (chatSubscription != null) {
-            chatSubscription.unsubscribe();
+        if (mChatDisplsable != null && !mChatDisplsable.isDisposed()) {
+            mChatDisplsable.dispose();
         }
     }
 
     @Override
     public void start() {
-// 没有start...
+        // 没有start...
     }
 }

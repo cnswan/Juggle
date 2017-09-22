@@ -8,16 +8,10 @@ import com.cnswan.juggle.bean.picture.PictureBean;
 import com.cnswan.juggle.bean.technews.AndroidNewsBean;
 import com.cnswan.juggle.bean.topnews.TopNewsBean;
 
+import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import rx.Observable;
-
-/**
- * Created by zhangxin on 2017/3/22 0022.
- * <p>
- * Description :
- */
 
 public interface Api {
 

@@ -14,14 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.cnswan.juggle.R;
 
-import rx.Subscription;
-import rx.subscriptions.CompositeSubscription;
-
-/**
- * Created by zhangxin on 2017/3/22 0022.
- * <p>
- * Description :
- */
+import org.reactivestreams.Subscription;
 
 public abstract class BaseFragment extends Fragment {
 
