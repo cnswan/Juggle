@@ -1,7 +1,9 @@
 package com.cnswan.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.BackpressureStrategy;
@@ -15,6 +17,7 @@ import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
@@ -26,12 +29,13 @@ import io.reactivex.schedulers.Schedulers;
 public class RxJava {
 
     public static void main(String[] args) {
-        useRxJavaByConsumer();
-        useRxJavaByObserver();
-        useRxJavaByMap();
-        useRxJavaByFlatMap();
-        useRxJavaByInterval();
-        useRxJavaByTimer();
+//        useRxJavaByConsumer();
+//        useRxJavaByObserver();
+//        useRxJavaByMap();
+//        useRxJavaByFlatMap();
+//        useRxJavaByInterval();
+//        useRxJavaByTimer();
+        useRxJavaZip();
     }
 
     public static void useRxJavaByConsumer() {
@@ -165,4 +169,52 @@ public class RxJava {
         //                    }
         //                });
     }
+
+    public static void useRxJavaZip() {
+        List<String> strings = new ArrayList<>();
+        strings.add("1");
+        strings.add("2");
+        List<Observable<Integer>> observables = new ArrayList<>();
+        for (final String s : strings) {
+            observables.add(Observable.fromCallable(new Callable<Integer>() {
+                @Override
+                public Integer call() throws Exception {
+                    System.out.println("fromCallable:" + s);
+                    return Integer.valueOf(s);
+                }
+            }));
+        }
+        Observable.zip(observables, new Function<Object[], List<String>>() {
+            @Override
+            public List<String> apply(@NonNull Object[] objects) throws Exception {
+                System.out.println("zip:" + Arrays.toString(objects));
+                List<String> list = new ArrayList<String>();
+                for (Object o : objects) {
+                    list.add(o.toString());
+                }
+                return list;
+            }
+        }).subscribe(new Consumer<List<String>>() {
+            @Override
+            public void accept(List<String> strings) throws Exception {
+                System.out.println("subscribe:" + strings);
+            }
+        }, new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                System.out.println("subscribe:" + throwable);
+            }
+        }, new Action() {
+            @Override
+            public void run() throws Exception {
+                System.out.println("subscribe:" + "onComplate");
+            }
+        }, new Consumer<Disposable>() {
+            @Override
+            public void accept(Disposable disposable) throws Exception {
+                System.out.println("subscribe:" + "onSubscribe");
+            }
+        });
+    }
+
 }
