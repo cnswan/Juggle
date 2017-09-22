@@ -1,15 +1,15 @@
 package com.cnswan.juggle.module.internal;
 
-import com.zx.freetime.App;
-import com.zx.freetime.bean.historytoday.HistoryTodayBean;
-import com.zx.freetime.http.HttpUtils;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.utils.ACache;
-import com.zx.freetime.utils.Constants;
-import com.zx.freetime.utils.TimeUtil;
 
+import com.cnswan.juggle.bean.historytoday.HistoryTodayBean;
+import com.cnswan.juggle.module.http.HttpUtils;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.utils.ACache;
+import com.cnswan.juggle.utils.Constants;
+import com.cnswan.juggle.utils.TimeUtil;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**

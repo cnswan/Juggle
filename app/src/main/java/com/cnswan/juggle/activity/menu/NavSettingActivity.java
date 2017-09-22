@@ -8,12 +8,12 @@ import android.text.TextUtils;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.zx.freetime.R;
-import com.zx.freetime.base.BaseSkinActivity;
-import com.zx.freetime.engine.changeskin.callback.ISkinChangingCallback;
-import com.zx.freetime.engine.changeskin.control.SkinConfig;
-import com.zx.freetime.engine.changeskin.control.SkinManager;
-import com.zx.freetime.widget.ZSwitch.SlideSwitch;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.amvp.BaseSkinActivity;
+import com.cnswan.juggle.module.changeskin.callback.ISkinChangingCallback;
+import com.cnswan.juggle.module.changeskin.control.SkinConfig;
+import com.cnswan.juggle.module.changeskin.control.SkinManager;
+import com.cnswan.juggle.widget.ZSwitch.SlideSwitch;
 
 import java.io.File;
 

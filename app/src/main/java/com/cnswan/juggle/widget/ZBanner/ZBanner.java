@@ -18,18 +18,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.zx.freetime.R;
+import com.cnswan.juggle.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static java.lang.System.load;
-
-/**
- * Created by zhangxin on 2017/3/22 0022.
- * <p>
- * Description :
- */
 
 public class ZBanner extends FrameLayout implements ViewPager.OnPageChangeListener {
 

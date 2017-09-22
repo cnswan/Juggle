@@ -6,12 +6,10 @@ import android.net.Uri;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.zx.freetime.ui.WebViewActivity;
-import com.zx.freetime.utils.NetWorkUtil;
-
+import com.cnswan.juggle.activity.WebViewActivity;
+import com.cnswan.juggle.utils.NetWorkUtil;
 
 /**
- * Created by jingbin on 2016/11/17.
  * 监听网页链接:
  * - 优酷视频直接跳到自带浏览器
  * - 根据标识:打电话、发短信、发邮件
@@ -20,7 +18,7 @@ import com.zx.freetime.utils.NetWorkUtil;
  */
 public class MyWebViewClient extends WebViewClient {
 
-    private IWebPageView mIWebPageView;
+    private IWebPageView    mIWebPageView;
     private WebViewActivity mActivity;
 
     public MyWebViewClient(IWebPageView mIWebPageView) {

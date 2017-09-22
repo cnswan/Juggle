@@ -19,13 +19,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-import com.zx.freetime.R;
-
-/**
- * Created by zhangxin on 2017/3/27 0027.
- * <p>
- * Description :
- */
+import com.cnswan.juggle.R;
 
 public class SlideSwitch extends View {
 

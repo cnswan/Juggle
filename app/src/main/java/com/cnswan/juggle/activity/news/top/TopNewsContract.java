@@ -1,8 +1,9 @@
 package com.cnswan.juggle.activity.news.top;
 
-import com.zx.freetime.base.BasePresenter;
-import com.zx.freetime.base.BaseView;
-import com.zx.freetime.bean.topnews.TopNewsItem;
+
+import com.cnswan.juggle.amvp.BasePresenter;
+import com.cnswan.juggle.amvp.BaseView;
+import com.cnswan.juggle.bean.topnews.TopNewsItem;
 
 import java.util.List;
 

@@ -1,12 +1,12 @@
 package com.cnswan.juggle.module.internal;
 
 
-import com.zx.freetime.bean.movie.HotMovieBean;
-import com.zx.freetime.http.HttpUtils;
-import com.zx.freetime.http.RequestImpl;
+import com.cnswan.juggle.bean.movie.HotMovieBean;
+import com.cnswan.juggle.module.http.HttpUtils;
+import com.cnswan.juggle.module.http.RequestImpl;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 

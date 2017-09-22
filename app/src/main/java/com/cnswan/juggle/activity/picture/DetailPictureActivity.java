@@ -1,16 +1,13 @@
 package com.cnswan.juggle.activity.picture;
 
-import android.support.v4.view.PagerAdapter;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-import com.zx.freetime.R;
+import com.cnswan.juggle.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DetailPictureActivity extends AppCompatActivity {
 

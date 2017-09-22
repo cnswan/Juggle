@@ -1,10 +1,8 @@
 package com.cnswan.juggle.activity.picture;
 
-
-
-import com.zx.freetime.bean.picture.PictureBean;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.model.PictureModel;
+import com.cnswan.juggle.bean.picture.PictureBean;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.module.internal.PictureModel;
 
 import rx.Subscription;
 

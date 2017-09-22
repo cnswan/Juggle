@@ -2,8 +2,8 @@ package com.cnswan.juggle.activity.HistoryToday;
 
 import android.view.View;
 
-import com.zx.freetime.base.BaseActivity;
-import com.zx.freetime.base.BaseFragment;
+import com.cnswan.juggle.amvp.BaseFragment;
+
 
 /**
  * Created by zhangxin on 2017/3/22 0022.

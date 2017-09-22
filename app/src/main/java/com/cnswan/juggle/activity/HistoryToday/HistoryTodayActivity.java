@@ -1,25 +1,24 @@
 package com.cnswan.juggle.activity.HistoryToday;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.HistoryTodayAdapter;
-import com.zx.freetime.bean.historytoday.ResultBean;
-import com.zx.freetime.ui.news.tech.TechNewsFragment;
-import com.zx.freetime.utils.TimeUtil;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.adapter.HistoryTodayAdapter;
+import com.cnswan.juggle.bean.historytoday.ResultBean;
+import com.cnswan.juggle.utils.TimeUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryTodayActivity extends AppCompatActivity implements HistoryTodayContract.View {
-    TextView mTitle;
-    RecyclerView mRecyclerView;
-    HistoryTodayAdapter mAdapter;
+    TextView                       mTitle;
+    RecyclerView                   mRecyclerView;
+    HistoryTodayAdapter            mAdapter;
     HistoryTodayContract.Presenter mPresenter;
 
     public ArrayList<String> titles = new ArrayList<>(); //刚一开始是空的;

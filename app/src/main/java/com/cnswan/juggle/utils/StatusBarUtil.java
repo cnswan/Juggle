@@ -13,19 +13,14 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.zx.freetime.widget.ZStatusBar.StatusBarView;
+import com.cnswan.juggle.widget.ZStatusBar.StatusBarView;
 
 
 /**
- * Created by Jaeger on 16/2/14.
- * <p>
- * Email: chjie.jaeger@gmail.com
- * GitHub: https://github.com/laobie
  * 简单说一下其作用:主要是想改变状态栏的颜色,但是该工具类只适用于android4.4及以后(>=api 19)
  * 在android4.4中,android提供了使状态栏透明的方法,并提供了fitsSystemWindows属性,这样就可以让状态栏和toolBar的颜色一样
  * 在android5.0及以后,可以自行设置颜色了
  * 为了达到4.4和5.0效果的统一,针对4.4也可以随意修改颜色,这里采用了在4.4中填充一个和状态栏等大的view的方法,这样设置该view的颜色,效果看起来就是状态栏改变了颜色
- *
  */
 public class StatusBarUtil {
 

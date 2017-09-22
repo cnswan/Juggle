@@ -1,24 +1,17 @@
 package com.cnswan.juggle.activity.chat;
 
-import com.zx.freetime.bean.chat.ChatBean;
-import com.zx.freetime.bean.topnews.TopNewsBean;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.model.ChatModel;
+import com.cnswan.juggle.bean.chat.ChatBean;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.module.internal.ChatModel;
 
 import rx.Subscription;
-
-/**
- * Created by zhangxin on 2017/3/26 0026.
- * <p>
- * Description :
- */
 
 public class ChatPresenter implements ChatContract.Presenter {
 
     private ChatContract.View mView;
     private ChatModel mModel = new ChatModel();
-    private RequestImpl mRequest;
-    public Subscription chatSubscription;
+    private RequestImpl  mRequest;
+    public  Subscription chatSubscription;
 
 
     public ChatPresenter(ChatContract.View view) {

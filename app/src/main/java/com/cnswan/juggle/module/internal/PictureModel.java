@@ -1,13 +1,12 @@
 package com.cnswan.juggle.module.internal;
 
 
+import com.cnswan.juggle.bean.picture.PictureBean;
+import com.cnswan.juggle.module.http.HttpUtils;
+import com.cnswan.juggle.module.http.RequestImpl;
 
-import com.zx.freetime.bean.picture.PictureBean;
-import com.zx.freetime.http.HttpUtils;
-import com.zx.freetime.http.RequestImpl;
-
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class PictureModel {

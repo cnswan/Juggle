@@ -1,15 +1,11 @@
 package com.cnswan.juggle.activity.HistoryToday;
 
-import android.text.TextUtils;
-
-import com.zx.freetime.App;
-import com.zx.freetime.bean.historytoday.HistoryTodayBean;
-import com.zx.freetime.bean.historytoday.ResultBean;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.model.HistoryTodayModel;
-import com.zx.freetime.utils.ACache;
-import com.zx.freetime.utils.Constants;
-import com.zx.freetime.utils.TimeUtil;
+import com.cnswan.juggle.bean.historytoday.HistoryTodayBean;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.module.internal.HistoryTodayModel;
+import com.cnswan.juggle.utils.ACache;
+import com.cnswan.juggle.utils.Constants;
+import com.cnswan.juggle.utils.TimeUtil;
 
 import rx.Subscription;
 
@@ -22,8 +18,8 @@ import rx.Subscription;
 public class HistoryTodayPresenter implements HistoryTodayContract.Presenter {
     private HistoryTodayContract.View mView;
     private HistoryTodayModel mModel = new HistoryTodayModel();
-    private RequestImpl mRequest;
-    public Subscription historySubscription;
+    private RequestImpl  mRequest;
+    public  Subscription historySubscription;
 
     public HistoryTodayPresenter(HistoryTodayContract.View view) {
         mView = view;

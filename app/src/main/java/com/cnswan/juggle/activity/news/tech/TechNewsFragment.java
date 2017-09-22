@@ -1,16 +1,13 @@
 package com.cnswan.juggle.activity.news.tech;
 
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.TechNewsAdapter;
-import com.zx.freetime.base.BaseFragment;
-import com.zx.freetime.bean.technews.AndroidNewsBean;
-import com.zx.freetime.ui.news.NewsFragment;
-import com.zx.freetime.utils.Constants;
-import com.zx.freetime.widget.ZRecyclerView.XRecyclerView;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.adapter.TechNewsAdapter;
+import com.cnswan.juggle.amvp.BaseFragment;
+import com.cnswan.juggle.bean.technews.AndroidNewsBean;
+import com.cnswan.juggle.widget.ZRecyclerView.XRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +21,8 @@ import java.util.List;
 public class TechNewsFragment extends BaseFragment implements TechNewsContract.View {
 
     private List<AndroidNewsBean.ResultBean> mTechNewsList = new ArrayList<>(); //刚一开始是空的;
-    private XRecyclerView mRecyclerView;
-    private TechNewsAdapter mAdapter;
+    private XRecyclerView              mRecyclerView;
+    private TechNewsAdapter            mAdapter;
     private TechNewsContract.Presenter mPresenter;
     private int mPage = 1;
 

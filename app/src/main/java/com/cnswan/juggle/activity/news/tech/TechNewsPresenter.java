@@ -1,11 +1,10 @@
 package com.cnswan.juggle.activity.news.tech;
 
-import com.zx.freetime.App;
-import com.zx.freetime.bean.technews.AndroidNewsBean;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.model.AndroidNewsModel;
-import com.zx.freetime.utils.Constants;
-import com.zx.freetime.utils.NetWorkUtil;
+
+import com.cnswan.juggle.bean.technews.AndroidNewsBean;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.module.internal.AndroidNewsModel;
+import com.cnswan.juggle.utils.NetWorkUtil;
 
 import rx.Subscription;
 

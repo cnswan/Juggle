@@ -2,29 +2,20 @@ package com.cnswan.juggle.module.internal;
 
 import android.util.Log;
 
-import com.zx.freetime.bean.chat.ChatBean;
-import com.zx.freetime.bean.technews.AndroidNewsBean;
-import com.zx.freetime.http.HttpUtils;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.utils.Constants;
+import com.cnswan.juggle.bean.chat.ChatBean;
+import com.cnswan.juggle.module.http.HttpUtils;
+import com.cnswan.juggle.module.http.RequestImpl;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import rx.Subscriber;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-
-/**
- * Created by zhangxin on 2017/3/26 0026.
- * <p>
- * Description :
- */
 
 public class ChatModel {
 
     private final String appKey = "17419f5e88107690d31bf9fe417b6ba7";
 
     public void talk(String content, final RequestImpl request) {
-        Log.e("###", "执行chat");
         Subscription subscription = HttpUtils.getInstance().getChatClient()
                 .talk(content, appKey)
                 .subscribeOn(Schedulers.io())

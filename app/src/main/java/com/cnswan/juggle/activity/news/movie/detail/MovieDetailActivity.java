@@ -13,26 +13,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.MovieDetailAdapter;
-import com.zx.freetime.base.BaseHeaderActivity;
-import com.zx.freetime.bean.movie.MovieDetailBean;
-import com.zx.freetime.bean.movie.SubjectsBean;
-import com.zx.freetime.http.HttpUtils;
-import com.zx.freetime.utils.CommonUtils;
-import com.zx.freetime.utils.StringFormatUtil;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.adapter.MovieDetailAdapter;
+import com.cnswan.juggle.amvp.BaseHeaderActivity;
+import com.cnswan.juggle.bean.movie.MovieDetailBean;
+import com.cnswan.juggle.bean.movie.SubjectsBean;
+import com.cnswan.juggle.module.http.HttpUtils;
+import com.cnswan.juggle.utils.CommonUtils;
+import com.cnswan.juggle.utils.StringFormatUtil;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class MovieDetailActivity extends BaseHeaderActivity {
 
     private SubjectsBean subjectsBean;
-    private String mMoreUrl;
-    private String mMovieName;
+    private String       mMoreUrl;
+    private String       mMovieName;
 
     private ImageView imgItemBg;
     private ImageView imgOnePhoto;

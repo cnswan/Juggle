@@ -3,7 +3,6 @@ package com.cnswan.juggle.widget.ZSplash;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -14,13 +13,10 @@ import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.zx.freetime.R;
-import com.zx.freetime.ui.MainActivity;
+import com.cnswan.juggle.R;
 
 
 /**
- * Created by zhangxin on 2017/3/19 0019.
- * <p>
  * Description :
  */
 public class WowView extends View {

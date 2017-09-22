@@ -14,13 +14,10 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import com.zx.freetime.R;
+import com.cnswan.juggle.R;
 
 
 /**
- * Created by zhangxin on 2017/3/19 0019.
- * <p>
- * Description :
  * 自定义的splash 的 view
  */
 public class WowSplashView extends View {

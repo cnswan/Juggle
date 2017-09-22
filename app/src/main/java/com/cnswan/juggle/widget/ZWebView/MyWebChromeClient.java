@@ -9,9 +9,8 @@ import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
-
-import com.zx.freetime.R;
-import com.zx.freetime.ui.WebViewActivity;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.activity.WebViewActivity;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -29,10 +28,10 @@ public class MyWebChromeClient extends WebChromeClient {
     public static int FILECHOOSER_RESULTCODE = 1;
     public static int FILECHOOSER_RESULTCODE_FOR_ANDROID_5 = 2;
 
-    private View mXProgressVideo;
-    private WebViewActivity mActivity;
-    private IWebPageView mIWebPageView;
-    private View mXCustomView;
+    private View               mXProgressVideo;
+    private WebViewActivity    mActivity;
+    private IWebPageView       mIWebPageView;
+    private View               mXCustomView;
     private CustomViewCallback mXCustomViewCallback;
 
     public MyWebChromeClient(IWebPageView mIWebPageView) {

@@ -1,32 +1,27 @@
 package com.cnswan.juggle.adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.zx.freetime.R;
-import com.zx.freetime.bean.topnews.TopNewsItem;
-import com.zx.freetime.ui.WebViewActivity;
-import com.zx.freetime.ui.news.movie.detail.MovieDetailActivity;
-import com.zx.freetime.ui.news.top.detail.TopNewsDetailActivity;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.activity.news.top.detail.TopNewsDetailActivity;
+import com.cnswan.juggle.bean.topnews.TopNewsItem;
 
 import java.util.List;
 
 public class TopNewsAdapter extends RecyclerView.Adapter<TopNewsAdapter.TopNewsHolder> {
     private List<TopNewsItem> mItems;
-    private Activity mContext;
+    private Activity          mContext;
 
     public TopNewsAdapter(Activity context, List<TopNewsItem> items) {
         mContext = context;

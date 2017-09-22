@@ -1,7 +1,6 @@
 package com.cnswan.juggle.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -12,15 +11,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.zx.freetime.R;
-import com.zx.freetime.bean.technews.AndroidNewsBean;
-import com.zx.freetime.ui.WebViewActivity;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.activity.WebViewActivity;
+import com.cnswan.juggle.bean.technews.AndroidNewsBean;
 
 import java.util.List;
 
 public class TechNewsAdapter extends RecyclerView.Adapter<TechNewsAdapter.TechNewsHolder> {
     private List<AndroidNewsBean.ResultBean> mItems;
-    private Context mContext;
+    private Context                          mContext;
 
     public TechNewsAdapter(Context context, List<AndroidNewsBean.ResultBean> items) {
         mContext = context;

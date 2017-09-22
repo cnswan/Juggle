@@ -1,14 +1,8 @@
 package com.cnswan.juggle.activity.chat;
 
-import com.zx.freetime.base.BasePresenter;
-import com.zx.freetime.base.BaseView;
-import com.zx.freetime.bean.chat.ChatBean;
-
-/**
- * Created by zhangxin on 2017/3/26 0026.
- * <p>
- * Description :
- */
+import com.cnswan.juggle.amvp.BasePresenter;
+import com.cnswan.juggle.amvp.BaseView;
+import com.cnswan.juggle.bean.chat.ChatBean;
 
 public class ChatContract {
     interface View extends BaseView {

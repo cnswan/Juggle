@@ -3,12 +3,9 @@ package com.cnswan.juggle.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.zx.freetime.engine.changeskin.control.SkinConfig;
+import com.cnswan.juggle.module.changeskin.control.SkinConfig;
 
 
-/**
- * Created by zhy on 15/9/22.
- */
 public class PrefUtils {
     private Context mContext;
 

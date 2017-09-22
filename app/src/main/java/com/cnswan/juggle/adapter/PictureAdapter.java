@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.cnswan.juggle.R;
-import com.zx.freetime.ui.picture.DetailPictureActivity;
+import com.cnswan.juggle.activity.picture.DetailPictureActivity;
 
 import java.util.ArrayList;
 

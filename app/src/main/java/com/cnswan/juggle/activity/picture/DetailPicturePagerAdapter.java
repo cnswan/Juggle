@@ -5,11 +5,10 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.zx.freetime.R;
-import com.zx.freetime.widget.Zoom.ZoomImageView;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.widget.Zoom.ZoomImageView;
 
 import java.util.ArrayList;
 

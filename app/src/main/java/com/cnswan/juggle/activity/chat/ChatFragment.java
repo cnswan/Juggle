@@ -19,12 +19,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.ChatAdapter;
-import com.zx.freetime.base.BaseFragment;
-import com.zx.freetime.bean.chat.ChatBean;
-import com.zx.freetime.http.Api;
-import com.zx.freetime.ui.MainActivity;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.adapter.ChatAdapter;
+import com.cnswan.juggle.bean.chat.ChatBean;
 
 import java.util.ArrayList;
 
@@ -40,7 +37,7 @@ public class ChatFragment extends Fragment implements ChatContract.View {
     Button mButton;
 
     ArrayList<String> list = new ArrayList<>();
-    ChatAdapter mAdapter;
+    ChatAdapter         mAdapter;
     LinearLayoutManager layoutManager;
 
     ChatContract.Presenter mPresenter;

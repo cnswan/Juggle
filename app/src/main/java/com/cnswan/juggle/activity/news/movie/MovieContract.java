@@ -1,8 +1,9 @@
 package com.cnswan.juggle.activity.news.movie;
 
-import com.zx.freetime.base.BasePresenter;
-import com.zx.freetime.base.BaseView;
-import com.zx.freetime.bean.movie.SubjectsBean;
+
+import com.cnswan.juggle.amvp.BasePresenter;
+import com.cnswan.juggle.amvp.BaseView;
+import com.cnswan.juggle.bean.movie.SubjectsBean;
 
 import java.util.List;
 

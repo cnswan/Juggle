@@ -1,8 +1,7 @@
 package com.cnswan.juggle.utils;
 
 
-
-import com.zx.freetime.bean.movie.PersonBean;
+import com.cnswan.juggle.bean.movie.PersonBean;
 
 import java.util.List;
 

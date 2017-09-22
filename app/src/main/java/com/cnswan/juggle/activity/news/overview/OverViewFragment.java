@@ -1,27 +1,24 @@
 package com.cnswan.juggle.activity.news.overview;
 
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.SystemClock;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.OverViewAdapter;
-import com.zx.freetime.base.BaseFragment;
-import com.zx.freetime.rx.RxBus;
-import com.zx.freetime.rx.RxBusBaseMessage;
-import com.zx.freetime.rx.RxCodeConstants;
-import com.zx.freetime.ui.HistoryToday.HistoryTodayActivity;
-import com.zx.freetime.utils.TimeUtil;
-import com.zx.freetime.widget.ZBanner.ZBanner;
-import com.zx.freetime.widget.ZBanner.ZBannerBean;
-import com.zx.freetime.widget.ZRecyclerView.XRecyclerView;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.activity.HistoryToday.HistoryTodayActivity;
+import com.cnswan.juggle.adapter.OverViewAdapter;
+import com.cnswan.juggle.amvp.BaseFragment;
+import com.cnswan.juggle.module.rxjava.RxBus;
+import com.cnswan.juggle.module.rxjava.RxBusBaseMessage;
+import com.cnswan.juggle.module.rxjava.RxCodeConstants;
+import com.cnswan.juggle.utils.TimeUtil;
+import com.cnswan.juggle.widget.ZBanner.ZBanner;
+import com.cnswan.juggle.widget.ZBanner.ZBannerBean;
+import com.cnswan.juggle.widget.ZRecyclerView.XRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +30,7 @@ import java.util.List;
  */
 
 public class OverViewFragment extends BaseFragment {
-    XRecyclerView mXRecyclerView;
+    XRecyclerView   mXRecyclerView;
     OverViewAdapter mAdapter;
     int start = 0;
     ArrayList<String> list = new ArrayList<>();

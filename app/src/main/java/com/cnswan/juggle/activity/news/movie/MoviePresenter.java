@@ -3,9 +3,9 @@ package com.cnswan.juggle.activity.news.movie;
 
 import android.util.Log;
 
-import com.zx.freetime.bean.movie.HotMovieBean;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.model.MovieModel;
+import com.cnswan.juggle.bean.movie.HotMovieBean;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.module.internal.MovieModel;
 
 import rx.Subscription;
 

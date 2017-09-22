@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.WindowManager;
 
-import com.zx.freetime.App;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;

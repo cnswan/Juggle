@@ -2,23 +2,19 @@ package com.cnswan.juggle.module.internal;
 
 import android.util.Log;
 
-import com.zx.freetime.App;
-import com.zx.freetime.bean.technews.AndroidNewsBean;
-import com.zx.freetime.bean.topnews.TopNewsBean;
-import com.zx.freetime.http.HttpUtils;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.utils.ACache;
-import com.zx.freetime.utils.Constants;
+import com.cnswan.juggle.bean.technews.AndroidNewsBean;
+import com.cnswan.juggle.bean.topnews.TopNewsBean;
+import com.cnswan.juggle.module.http.HttpUtils;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.utils.ACache;
+import com.cnswan.juggle.utils.Constants;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import rx.Subscriber;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by zhangxin on 2017/3/26 0026.
- * <p>
- * Description :
  * TODO:处理逻辑是:每次把最新的一组新闻设置到ACache中,但是在此时的界面时,内存中保存着多次请求的对象,保存多少呢???
  */
 

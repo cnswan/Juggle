@@ -7,19 +7,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.widget.NestedScrollView;
 import android.text.Editable;
 import android.text.Html;
 import android.transition.Transition;
-import android.view.DragEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.zx.freetime.R;
-import com.zx.freetime.base.BaseHeaderActivity;
-import com.zx.freetime.bean.topnews.TopNewsItem;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.amvp.BaseHeaderActivity;
+import com.cnswan.juggle.bean.topnews.TopNewsItem;
 
 import org.xml.sax.XMLReader;
 
@@ -34,9 +32,9 @@ import okhttp3.Response;
 
 public class TopNewsDetailActivity extends BaseHeaderActivity {
 
-    TextView tvTopNewsDetail;
-    ImageView imgTopNewsDetail;
-    ImageView imgItemBg;
+    TextView    tvTopNewsDetail;
+    ImageView   imgTopNewsDetail;
+    ImageView   imgItemBg;
     TopNewsItem item;
 
     boolean first = true;

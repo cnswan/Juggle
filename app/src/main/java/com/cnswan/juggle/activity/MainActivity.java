@@ -53,7 +53,6 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initView();
         initContentFragment();
         initDrawerLayout();
@@ -62,8 +61,8 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
     }
 
     private void initView() {
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = (DrawerLayout) findViewById(R.id.main_drawer_layout);
+        navView = (NavigationView) findViewById(R.id.main_nav_view);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         vpContent = (ViewPager) findViewById(R.id.vp_content);
@@ -240,7 +239,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

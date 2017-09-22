@@ -3,12 +3,13 @@ package com.cnswan.juggle.activity.menu;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.zx.freetime.R;
+import com.cnswan.juggle.R;
+
 
 public class NavDeedBackActivity extends AppCompatActivity {
     private TextView tvIssues;

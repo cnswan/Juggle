@@ -1,19 +1,11 @@
 package com.cnswan.juggle.activity.news.top;
 
-import com.zx.freetime.bean.technews.AndroidNewsBean;
-import com.zx.freetime.bean.topnews.TopNewsBean;
-import com.zx.freetime.http.RequestImpl;
-import com.zx.freetime.model.AndroidNewsModel;
-import com.zx.freetime.model.TopNewsModel;
-import com.zx.freetime.ui.news.tech.TechNewsContract;
+
+import com.cnswan.juggle.bean.topnews.TopNewsBean;
+import com.cnswan.juggle.module.http.RequestImpl;
+import com.cnswan.juggle.module.internal.TopNewsModel;
 
 import rx.Subscription;
-
-/**
- * Created by zhangxin on 2017/3/26 0026.
- * <p>
- * Description :
- */
 
 public class TopNewsPresenter implements TopNewsContract.Presenter {
     private TopNewsContract.View mView;

@@ -5,11 +5,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.Toast;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.TopNewsAdapter;
-import com.zx.freetime.base.BaseFragment;
-import com.zx.freetime.bean.topnews.TopNewsItem;
-import com.zx.freetime.widget.ZRecyclerView.XRecyclerView;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.adapter.TopNewsAdapter;
+import com.cnswan.juggle.amvp.BaseFragment;
+import com.cnswan.juggle.bean.topnews.TopNewsItem;
+import com.cnswan.juggle.widget.ZRecyclerView.XRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +22,8 @@ import java.util.List;
 
 public class TopNewsFragment extends BaseFragment implements TopNewsContract.View {
     private List<TopNewsItem> mTopNewsList = new ArrayList<>(); //刚一开始是空的;
-    private XRecyclerView mRecyclerView;
-    private TopNewsAdapter mAdapter;
+    private XRecyclerView             mRecyclerView;
+    private TopNewsAdapter            mAdapter;
     private TopNewsContract.Presenter mPresenter;
     private Long lastTime = 0L;
 

@@ -9,15 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.MyFragmentPagerAdapter;
-import com.zx.freetime.rx.RxBus;
-import com.zx.freetime.rx.RxBusBaseMessage;
-import com.zx.freetime.rx.RxCodeConstants;
-import com.zx.freetime.ui.news.movie.MovieFragment;
-import com.zx.freetime.ui.news.overview.OverViewFragment;
-import com.zx.freetime.ui.news.tech.TechNewsFragment;
-import com.zx.freetime.ui.news.top.TopNewsFragment;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.activity.news.movie.MovieFragment;
+import com.cnswan.juggle.activity.news.overview.OverViewFragment;
+import com.cnswan.juggle.activity.news.tech.TechNewsFragment;
+import com.cnswan.juggle.activity.news.top.TopNewsFragment;
+import com.cnswan.juggle.adapter.MyFragmentPagerAdapter;
+import com.cnswan.juggle.module.rxjava.RxBus;
+import com.cnswan.juggle.module.rxjava.RxBusBaseMessage;
+import com.cnswan.juggle.module.rxjava.RxCodeConstants;
 
 import java.util.ArrayList;
 

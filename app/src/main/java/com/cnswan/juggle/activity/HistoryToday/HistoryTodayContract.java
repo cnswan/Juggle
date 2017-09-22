@@ -1,11 +1,12 @@
 package com.cnswan.juggle.activity.HistoryToday;
 
-import com.zx.freetime.base.BasePresenter;
-import com.zx.freetime.base.BaseView;
-import com.zx.freetime.bean.historytoday.ResultBean;
-import com.zx.freetime.ui.news.tech.TechNewsFragment;
+
+import com.cnswan.juggle.amvp.BasePresenter;
+import com.cnswan.juggle.amvp.BaseView;
+import com.cnswan.juggle.bean.historytoday.ResultBean;
 
 import java.util.List;
+
 
 /**
  * Created by zhangxin on 2017/3/27 0027.

@@ -5,10 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 
-import com.zx.freetime.R;
-import com.zx.freetime.base.BaseFragment;
-import com.zx.freetime.bean.movie.SubjectsBean;
-import com.zx.freetime.ui.picture.PictureFragment;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.amvp.BaseFragment;
+import com.cnswan.juggle.bean.movie.SubjectsBean;
 
 import java.util.ArrayList;
 import java.util.List;
