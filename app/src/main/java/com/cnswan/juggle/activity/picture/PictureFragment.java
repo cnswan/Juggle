@@ -4,12 +4,11 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.Toast;
 
-import com.zx.freetime.R;
-import com.zx.freetime.adapter.PictureAdapter;
-import com.zx.freetime.base.BaseFragment;
-import com.zx.freetime.bean.picture.PictureBean;
-import com.zx.freetime.utils.Constants;
-import com.zx.freetime.widget.ZRecyclerView.XRecyclerView;
+import com.cnswan.juggle.R;
+import com.cnswan.juggle.adapter.PictureAdapter;
+import com.cnswan.juggle.amvp.BaseFragment;
+import com.cnswan.juggle.bean.picture.PictureBean;
+import com.cnswan.juggle.widget.ZRecyclerView.XRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +21,7 @@ import java.util.List;
 
 public class PictureFragment extends BaseFragment implements PictureContract.View {
     public ArrayList<String> mUrls = new ArrayList<>(); //刚一开始是空的;
-    private XRecyclerView mRecyclerView;
+    private XRecyclerView  mRecyclerView;
     private PictureAdapter mAdapter;
     PictureContract.Presenter mPresenter;
     private int mPage = 1;

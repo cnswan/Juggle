@@ -1,4 +1,5 @@
 ## Juggle 戏法
+- 该项目是对所学比较前沿知识点的一个总结
 
 [![GitHub author](https://img.shields.io/badge/author-cnswan-ff9600.svg)](https://github.com/cnswan)&ensp;&ensp;
 [![GitHub issues](https://img.shields.io/github/issues/cnswan/juggle.svg)](https://github.com/cnswan/juggle/issues)&ensp;&ensp;
@@ -16,9 +17,11 @@
 - link:链接地址		 [https://github.com/cnswan](https://github.com/cnswan)
 
 ### RxJava 使用说明 ###
+- 我的笔记：[RxJava使用说明](https://github.com/cnswan/juggle/tree/master/notes/rxjava)
 - 参考资料：[https://github.com/mcxiaoke/RxDocs](https://github.com/mcxiaoke/RxDocs)
 
 ### Tinker 使用说明 ###
+- 我的笔记：[Tinker使用说明](https://github.com/cnswan/juggle/tree/master/notes/tinker)
 - 参考资料：[https://github.com/Tencent/tinker](https://github.com/Tencent/tinker)
 
 #### 下载地址 | APK Download：
