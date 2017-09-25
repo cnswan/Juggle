@@ -10,16 +10,10 @@
 [![Version Name](https://img.shields.io/badge/Version%20Name-v1.6%20%E6%AD%A3%E5%BC%8F%E7%89%88-blue.svg)](https://github.com/cnswan)&ensp;&ensp; 
 
 ## 学习笔记
-### shields 徽章 使用说明 ###
-- shields参考：		[https://shields.io](https://shields.io)
-- shields格式：		`[![desc](shields-url)](link)`
-- shields-url格式：	`https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg`
-- shields示例：		`https://img.shields.io/badge/author-cnswan-ff9600.svg`
-- link:链接地址		 [https://github.com/cnswan](https://github.com/cnswan)
-
-### RxJava 使用说明 ###
-- 我的笔记：[RxJava使用说明](https://github.com/cnswan/juggle/tree/master/notes/rxjava)
-- 参考资料：[https://github.com/mcxiaoke/RxDocs](https://github.com/mcxiaoke/RxDocs)
+   - [shields-徽章 笔记](https://github.com/cnswan/notes/shields)
+   `参考 https://github.com/badges/shields`
+   - [RxJava 笔记](https://github.com/cnswan/notes/rxjava)
+   `参考 https://github.com/mcxiaoke/RxDocs`
 
 ### Tinker 使用说明 ###
 - 我的笔记：[Tinker使用说明](https://github.com/cnswan/juggle/tree/master/notes/tinker)
