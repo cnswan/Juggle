@@ -56,7 +56,7 @@ public class WebViewActivity extends AppCompatActivity implements IWebPageView {
     }
 
     private void initTitle() {
-        StatusBarUtil.setColor(this, CommonUtils.getColor(R.color.colorTheme),0);
+        StatusBarUtil.setColor(this, CommonUtils.getColor(R.color.colorPrimary),0);
         mProgressBar = (ProgressBar) findViewById(R.id.pb_progress);
         webView = (WebView) findViewById(R.id.webview_detail);
         videoFullView = (FrameLayout) findViewById(R.id.video_fullView);

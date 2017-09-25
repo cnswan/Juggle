@@ -32,6 +32,8 @@ public class MApplicationLike extends DefaultApplicationLike {
     public void onBaseContextAttached(Context base) {
         super.onBaseContextAttached(base);
         MultiDex.install(base);
+        AppContext.application = getApplication();
+        AppContext.context = getApplication();
         TinkerManager.setTinkerApplicationLike(this);
         TinkerManager.setUpgradeRetryEnable(true);
         TinkerManager.installTinker(this);

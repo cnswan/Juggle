@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <com.zx.freetime.widget.ZRecyclerView.XRecyclerView
+    <com.cnswan.juggle.widget.ZRecyclerView.XRecyclerView
         android:id="@+id/fg_overview_rc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

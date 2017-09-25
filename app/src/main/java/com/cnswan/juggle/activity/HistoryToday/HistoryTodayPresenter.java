@@ -1,5 +1,6 @@
 package com.cnswan.juggle.activity.HistoryToday;
 
+import com.cnswan.juggle.aapp.AppContext;
 import com.cnswan.juggle.bean.historytoday.HistoryTodayBean;
 import com.cnswan.juggle.module.http.RequestImpl;
 import com.cnswan.juggle.module.internal.HistoryTodayModel;
@@ -7,19 +8,14 @@ import com.cnswan.juggle.utils.ACache;
 import com.cnswan.juggle.utils.Constants;
 import com.cnswan.juggle.utils.TimeUtil;
 
-import rx.Subscription;
-
-/**
- * Created by zhangxin on 2017/3/27 0027.
- * <p>
- * Description :
- */
+import io.reactivex.disposables.Disposable;
 
 public class HistoryTodayPresenter implements HistoryTodayContract.Presenter {
+
     private HistoryTodayContract.View mView;
     private HistoryTodayModel mModel = new HistoryTodayModel();
-    private RequestImpl  mRequest;
-    public  Subscription historySubscription;
+    private RequestImpl mRequest;
+    public  Disposable  historyDisposable;
 
     public HistoryTodayPresenter(HistoryTodayContract.View view) {
         mView = view;
@@ -40,8 +36,8 @@ public class HistoryTodayPresenter implements HistoryTodayContract.Presenter {
             }
 
             @Override
-            public void addSubscription(Subscription subscription) {
-                historySubscription = subscription;
+            public void addSubscription(Disposable disposable) {
+                historyDisposable = disposable;
             }
         };
     }
@@ -58,14 +54,14 @@ public class HistoryTodayPresenter implements HistoryTodayContract.Presenter {
 
     @Override
     public void unSubscribe() {
-        if (historySubscription != null) {
-            historySubscription.unsubscribe();
+        if (historyDisposable != null) {
+            historyDisposable.dispose();
         }
     }
 
     @Override
     public void start() {
-        String today = ACache.get(App.getInstance()).getAsString(Constants.TODAY);
+        String today = ACache.get(AppContext.context).getAsString(Constants.TODAY);
         System.out.println("today:" + today);
         if (TimeUtil.getTodayTimeStamp().equals(today)) {
             getHistoryFromCache();

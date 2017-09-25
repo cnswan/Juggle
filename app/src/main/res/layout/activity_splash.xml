@@ -12,12 +12,12 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"/>
 
-    <com.zx.freetime.widget.ZSplash.WowSplashView
+    <com.cnswan.juggle.widget.ZSplash.WowSplashView
         android:id="@+id/wowSplash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <com.zx.freetime.widget.ZSplash.WowView
+    <com.cnswan.juggle.widget.ZSplash.WowView
         android:id="@+id/wowView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

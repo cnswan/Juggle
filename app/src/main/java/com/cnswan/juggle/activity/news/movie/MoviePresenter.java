@@ -7,13 +7,8 @@ import com.cnswan.juggle.bean.movie.HotMovieBean;
 import com.cnswan.juggle.module.http.RequestImpl;
 import com.cnswan.juggle.module.internal.MovieModel;
 
-import rx.Subscription;
+import io.reactivex.disposables.Disposable;
 
-/**
- * Created by zhangxin on 2016/11/26.
- * <p>
- * Description :
- */
 public class MoviePresenter implements MovieContract.Presenter{
 
     private MovieContract.View mView;
@@ -42,8 +37,8 @@ public class MoviePresenter implements MovieContract.Presenter{
             }
 
             @Override
-            public void addSubscription(Subscription subscription) {
-                mView.getFragment().addSubscription(subscription);
+            public void addSubscription(Disposable disposable) {
+                mView.getFragment().addSubscription(disposable);
             }
         });
     }

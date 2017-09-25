@@ -5,7 +5,7 @@ import com.cnswan.juggle.bean.topnews.TopNewsBean;
 import com.cnswan.juggle.module.http.RequestImpl;
 import com.cnswan.juggle.module.internal.TopNewsModel;
 
-import rx.Subscription;
+import io.reactivex.disposables.Disposable;
 
 public class TopNewsPresenter implements TopNewsContract.Presenter {
     private TopNewsContract.View mView;
@@ -33,8 +33,8 @@ public class TopNewsPresenter implements TopNewsContract.Presenter {
             }
 
             @Override
-            public void addSubscription(Subscription subscription) {
-                mView.getFragment().addSubscription(subscription);
+            public void addSubscription(Disposable disposable) {
+                mView.getFragment().addSubscription(disposable);
             }
         };
     }

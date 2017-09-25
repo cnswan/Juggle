@@ -23,10 +23,10 @@ import com.cnswan.juggle.utils.CommonUtils;
 import com.cnswan.juggle.utils.StringFormatUtil;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Action;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import jp.wasabeef.glide.transformations.BlurTransformation;
-import rx.Observer;
-import rx.Subscription;
-import rx.schedulers.Schedulers;
 
 public class MovieDetailActivity extends BaseHeaderActivity {
 
@@ -36,23 +36,23 @@ public class MovieDetailActivity extends BaseHeaderActivity {
 
     private ImageView imgItemBg;
     private ImageView imgOnePhoto;
-    private TextView tvOneRattingRate;
-    private TextView tvOneRatingNumber;
-    private TextView tvOneDirector;
-    private TextView tvOneCasts;
-    private TextView tvOneGenres;
-    private TextView tvOneDay;
-    private TextView tvOneCity;
+    private TextView  tvOneRattingRate;
+    private TextView  tvOneRatingNumber;
+    private TextView  tvOneDirector;
+    private TextView  tvOneCasts;
+    private TextView  tvOneGenres;
+    private TextView  tvOneDay;
+    private TextView  tvOneCity;
 
 
     private RecyclerView rvCast;
-    private TextView tvOneTitle;
-    private TextView tvOneSummary;
+    private TextView     tvOneTitle;
+    private TextView     tvOneSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_movie_detail2);
+        //        setContentView(R.layout.activity_movie_detail2);
         if (getIntent() != null) {
             subjectsBean = (SubjectsBean) getIntent().getSerializableExtra("bean");
             initHeader();
@@ -64,6 +64,7 @@ public class MovieDetailActivity extends BaseHeaderActivity {
 
         loadMovieDetail();
     }
+
     private void initHeader() {
         //加载电影图片;
         Glide.with(imgOnePhoto.getContext())
@@ -145,22 +146,12 @@ public class MovieDetailActivity extends BaseHeaderActivity {
 
 
     private void loadMovieDetail() {
-        Subscription get = HttpUtils.getInstance().getMovieDetailClient().getMovieDetail(subjectsBean.getId())
+        HttpUtils.getInstance().getMovieDetailClient().getMovieDetail(subjectsBean.getId())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<MovieDetailBean>() {
+                .subscribe(new Consumer<MovieDetailBean>() {
                     @Override
-                    public void onCompleted() {
-                        showContentView();
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        showError();
-                    }
-
-                    @Override
-                    public void onNext(final MovieDetailBean movieDetailBean) {
+                    public void accept(MovieDetailBean movieDetailBean) throws Exception {
                         // 上映日期
                         tvOneDay.setText(String.format("上映日期：%s", movieDetailBean.getYear()));
                         // 制片国家
@@ -174,6 +165,16 @@ public class MovieDetailActivity extends BaseHeaderActivity {
                         mMovieName = movieDetailBean.getTitle();
 
                         transformData(movieDetailBean);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        showError();
+                    }
+                }, new Action() {
+                    @Override
+                    public void run() throws Exception {
+                        showContentView();
                     }
                 });
     }

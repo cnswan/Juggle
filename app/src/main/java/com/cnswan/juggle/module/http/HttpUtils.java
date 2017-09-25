@@ -3,15 +3,9 @@ package com.cnswan.juggle.module.http;
 import android.content.Context;
 
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by zhangxin 2016/10/28.
- * <p>
- * Description :
- * NOTE:感觉API的获取有点问题....
- */
 
 public class HttpUtils {
     private static final String API_ANDROIDNEWS = "http://gank.io/api/data/Android/";
@@ -58,7 +52,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_ANDROIDNEWS)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             AndroidNewClient = retrofit.create(Api.class);
         }
@@ -71,7 +65,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_PICTURE)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             PictureClient = retrofit.create(Api.class);
         }
@@ -83,7 +77,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_MOVIEW)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             MovieClient = retrofit.create(Api.class);
         }
@@ -96,7 +90,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_TOP)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             TopNewsClient = retrofit.create(Api.class);
         }
@@ -109,7 +103,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_CHAT)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             ChatClient = retrofit.create(Api.class);
         }
@@ -122,7 +116,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_HISTORY)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             HistoryClient = retrofit.create(Api.class);
         }
@@ -134,7 +128,7 @@ public class HttpUtils {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_MOVIEW_DETAILE)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             MovieDetailClient = retrofit.create(Api.class);
         }

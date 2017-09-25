@@ -12,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/skin_main_bg"
-        android:orientation="vertical"
-        tools:context="com.zx.freetime.ui.menu.NavSettingActivity">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,7 +29,7 @@
                 android:textColor="@color/skin_item_text_color"
                 android:textSize="25sp"/>
 
-            <com.zx.freetime.widget.ZSwitch.SlideSwitch
+            <com.cnswan.juggle.widget.ZSwitch.SlideSwitch
                 android:id="@+id/changeskin_switch"
                 android:layout_width="50dp"
                 android:layout_height="25dp"
@@ -59,7 +58,7 @@
                 android:textColor="@color/skin_item_text_color"
                 android:textSize="25sp"/>
 
-            <com.zx.freetime.widget.ZSwitch.SlideSwitch
+            <com.cnswan.juggle.widget.ZSwitch.SlideSwitch
                 android:id="@+id/night_mode_switch"
                 android:layout_width="50dp"
                 android:layout_height="25dp"

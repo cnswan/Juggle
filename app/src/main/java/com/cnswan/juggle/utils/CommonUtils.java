@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.WindowManager;
 
+import com.cnswan.juggle.aapp.AppContext;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -66,7 +68,7 @@ public class CommonUtils {
     }
 
     public static Resources getResoure() {
-        return App.getInstance().getResources();
+        return AppContext.context.getResources();
     }
 
     public static String[] getStringArray(int resid) {

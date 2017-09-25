@@ -1,28 +1,22 @@
 package com.cnswan.juggle.module.internal;
 
-
+import com.cnswan.juggle.aapp.AppContext;
 import com.cnswan.juggle.bean.historytoday.HistoryTodayBean;
 import com.cnswan.juggle.module.http.HttpUtils;
 import com.cnswan.juggle.module.http.RequestImpl;
 import com.cnswan.juggle.utils.ACache;
 import com.cnswan.juggle.utils.Constants;
-import com.cnswan.juggle.utils.TimeUtil;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import rx.Subscriber;
-import rx.schedulers.Schedulers;
-
-/**
- * Created by zhangxin on 2017/3/27 0027.
- * <p>
- * Description :
- */
+import io.reactivex.functions.Action;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 public class HistoryTodayModel {
     private ACache mCache;
 
     public HistoryTodayModel() {
-        mCache = ACache.get(App.getInstance());
+        mCache = ACache.get(AppContext.context);
     }
 
     public void getHistory(final RequestImpl request) {
@@ -31,25 +25,20 @@ public class HistoryTodayModel {
                 .getHistory()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<HistoryTodayBean>() {
+                .subscribe(new Consumer<HistoryTodayBean>() {
                     @Override
-                    public void onCompleted() {
-                        request.loadComplete();
+                    public void accept(HistoryTodayBean historyTodayBean) throws Exception {
+                        request.loadSuccess(historyTodayBean);
                     }
-
+                }, new Consumer<Throwable>() {
                     @Override
-                    public void onError(Throwable e) {
-                        System.out.println("获取历史今天数据失败...");
-                        e.printStackTrace();
+                    public void accept(Throwable throwable) throws Exception {
                         request.loadFailed();
                     }
-
+                }, new Action() {
                     @Override
-                    public void onNext(HistoryTodayBean historyTodayBean) {
-                        System.out.println("历史消息加载成功");
-                        mCache.put(Constants.HISTORY_ALL, historyTodayBean);
-                        mCache.put(Constants.TODAY, TimeUtil.getTodayTimeStamp());  //将当天的年月日插入进去;
-                        request.loadSuccess(historyTodayBean);
+                    public void run() throws Exception {
+                        request.loadComplete();
                     }
                 });
     }

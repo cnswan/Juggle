@@ -4,14 +4,8 @@ import com.cnswan.juggle.bean.picture.PictureBean;
 import com.cnswan.juggle.module.http.RequestImpl;
 import com.cnswan.juggle.module.internal.PictureModel;
 
-import rx.Subscription;
+import io.reactivex.disposables.Disposable;
 
-/**
- * Created by zhangxin on 2016/11/11 0011.
- * <p>
- * Description :
- * 注意:核心是Presenter中一定要持有View,当然在view中也是持有Presenter的;
- */
 public class PicturePresenter implements PictureContract.Presenter {
 
 
@@ -78,8 +72,8 @@ public class PicturePresenter implements PictureContract.Presenter {
             }
 
             @Override
-            public void addSubscription(Subscription subscription) {
-                mView.getFragment().addSubscription(subscription);
+            public void addSubscription(Disposable disposable) {
+                mView.getFragment().addSubscription(disposable);
             }
         });
     }

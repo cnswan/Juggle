@@ -14,7 +14,8 @@ import android.widget.RelativeLayout;
 
 import com.cnswan.juggle.R;
 
-import org.reactivestreams.Subscription;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 public abstract class BaseFragment extends Fragment {
 
@@ -38,7 +39,7 @@ public abstract class BaseFragment extends Fragment {
 
     //rx部分,用来收集所有的subscriber(订阅者),接下来在Activity onPause或者onDestroy时候统一取消订阅，避免造成内存泄漏
     //移除订阅之后,就不能再订阅了,除非是重新创建一个该对象;
-    private CompositeSubscription mCompositeSubscription;
+    private CompositeDisposable mCompositeDisposable;
 
     @Nullable
     @Override
@@ -143,11 +144,17 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-    public void addSubscription(Subscription s) {
-        if (this.mCompositeSubscription == null) {
-            this.mCompositeSubscription = new CompositeSubscription();
+    public void addSubscription(Disposable disposable) {
+        if (this.mCompositeDisposable == null) {
+            this.mCompositeDisposable = new CompositeDisposable();
         }
-        this.mCompositeSubscription.add(s);
+        this.mCompositeDisposable.add(disposable);
+    }
+
+    public void removeSubscription() {
+        if (this.mCompositeDisposable != null && mCompositeDisposable.isDisposed()) {
+            this.mCompositeDisposable.dispose();
+        }
     }
 
     @Override
@@ -155,14 +162,6 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroy();
         removeSubscription();
     }
-
-
-    public void removeSubscription() {
-        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
-            this.mCompositeSubscription.unsubscribe();
-        }
-    }
-
 
     //#################################################################
     //Fragment的View加载完毕的标记,在onCreateView方法调用的最后将该值进行设置;

@@ -11,8 +11,8 @@
         android:layout_height="40dp"
         android:background="@color/colorWhite"
         app:tabBackground="@drawable/ripple_tab_bg"
-        app:tabIndicatorColor="@color/colorTheme"
-        app:tabSelectedTextColor="@color/colorTheme"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
         app:tabTextColor="@color/colorTabText"/>
 
     <android.support.v4.view.ViewPager

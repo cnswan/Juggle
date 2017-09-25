@@ -69,7 +69,7 @@ public class WowSplashView extends View {
     public WowSplashView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         //设置背景颜色,我们这个矢量图没有背景色;设置为官方红;
-        setBackgroundColor(context.getResources().getColor(R.color.colorTheme));
+        setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
         setDrawingCacheEnabled(true);//允许缓存;那么下次再使用的时候可以getDrawingCache();
 
         if (Build.VERSION.SDK_INT < 21) { //小于21的版本;5.0一下;

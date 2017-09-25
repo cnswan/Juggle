@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.zx.freetime.widget.ZRecyclerView.XRecyclerView
+    <com.cnswan.juggle.widget.ZRecyclerView.XRecyclerView
         android:id="@+id/tech_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -16,7 +16,7 @@
         <View
             android:layout_width="2dp"
             android:layout_height="18dp"
-            android:background="@color/colorTheme"/>
+            android:background="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
         <View
             android:layout_width="2dp"
             android:layout_height="18dp"
-            android:background="@color/colorTheme"/>
+            android:background="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
         <View
             android:layout_width="2dp"
             android:layout_height="18dp"
-            android:background="@color/colorTheme"/>
+            android:background="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/textView"

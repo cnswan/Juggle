@@ -4,7 +4,7 @@
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
-     <com.zx.freetime.widget.ZBanner.ZBanner
+     <com.cnswan.juggle.widget.ZBanner.ZBanner
          android:id="@+id/zbanner"
          android:layout_width="match_parent"
          android:layout_height="200dp"/>

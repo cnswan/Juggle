@@ -1,9 +1,5 @@
 package com.cnswan.juggle.module.rxjava;
 
-/**
- * Created by zhangxin on 2016/12/2.
- */
-
 public class RxCodeConstants {
     public static final int JUMP_TO_SUB = 101;
 

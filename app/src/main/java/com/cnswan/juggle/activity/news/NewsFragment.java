@@ -21,17 +21,10 @@ import com.cnswan.juggle.module.rxjava.RxCodeConstants;
 
 import java.util.ArrayList;
 
-import rx.Subscription;
-import rx.functions.Action1;
-
-/**
- * Created by zhangxin on 2017/3/22 0022.
- * <p>
- * Description :该Fragment作为接下来接管Fragments的管理者;即该Fragment下会嵌套多个Fragment;
- */
+import io.reactivex.functions.Consumer;
 
 public class NewsFragment extends Fragment {
-    private ArrayList<String> mTitleList = new ArrayList<>(4);
+    private ArrayList<String>   mTitleList = new ArrayList<>(4);
     private ArrayList<Fragment> mFragments = new ArrayList<>(4);
 
     TabLayout gank_tab;
@@ -83,11 +76,11 @@ public class NewsFragment extends Fragment {
 
     //TODO:需要注意的是:避免内存泄露;
     private void initRxBus() {
-        Subscription subscription = RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TO_SUB, RxBusBaseMessage.class)
-                .subscribe(new Action1<RxBusBaseMessage>() {
+        RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TO_SUB, RxBusBaseMessage.class)
+                .subscribe(new Consumer<RxBusBaseMessage>() {
                     @Override
-                    public void call(RxBusBaseMessage msg) {  //这个参数应该是post的第一个参数code吧;
-                        gank_vp.setCurrentItem(msg.getCode());
+                    public void accept(RxBusBaseMessage rxBusBaseMessage) throws Exception {
+                        gank_vp.setCurrentItem(rxBusBaseMessage.getCode());
                     }
                 });
     }

@@ -33,7 +33,7 @@ import com.cnswan.juggle.widget.ZCircleImageView.CircleImageDrawable;
 
 import java.util.ArrayList;
 
-import rx.functions.Action1;
+import io.reactivex.functions.Consumer;
 
 public class MainActivity extends BaseSkinActivity implements View.OnClickListener, ViewPager.OnPageChangeListener  {
 
@@ -249,10 +249,10 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
 
     private void initRxBus() {
         RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TO_PARENT, RxBusBaseMessage.class)
-                .subscribe(new Action1<RxBusBaseMessage>() {
+                .subscribe(new Consumer<RxBusBaseMessage>() {
                     @Override
-                    public void call(RxBusBaseMessage msg) {
-                        vpContent.setCurrentItem(msg.getCode());
+                    public void accept(RxBusBaseMessage rxBusBaseMessage) throws Exception {
+                        vpContent.setCurrentItem(rxBusBaseMessage.getCode());
                     }
                 });
     }

@@ -120,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="2dp"
-                    android:background="@color/colorTheme"/>
+                    android:background="@color/colorPrimary"/>
                 <!--主演-->
                 <LinearLayout
                     android:layout_marginTop="2dp"
