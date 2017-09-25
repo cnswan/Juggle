@@ -24,7 +24,5 @@
 - 我的笔记：[Tinker使用说明](https://github.com/cnswan/juggle/tree/master/notes/tinker)
 - 参考资料：[https://github.com/Tencent/tinker](https://github.com/Tencent/tinker)
 
-#### 下载地址 | APK Download：
+#### 下载地址 | APK Download：暂未提供
 
-**地址一：**[http://fir.im/qbox](http://fir.im/qbox)  
-**地址二：**[https://raw.githubusercontent.com/OCNYang/QBox/master/apk/QBox.apk](https://raw.githubusercontent.com/OCNYang/QBox/master/apk/QBox.apk) 
