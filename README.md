@@ -1,5 +1,6 @@
 ## Juggle 戏法
-- 该项目是对所学比较前沿知识点的一个总结
+- 该项目是对所学知识点的一个总结
+- 我在想：即为APP又涵盖知识点岂不是两全齐美
 
 [![GitHub author](https://img.shields.io/badge/author-cnswan-ff9600.svg)](https://github.com/cnswan)&ensp;&ensp;
 [![GitHub issues](https://img.shields.io/github/issues/cnswan/juggle.svg)](https://github.com/cnswan/juggle/issues)&ensp;&ensp;
