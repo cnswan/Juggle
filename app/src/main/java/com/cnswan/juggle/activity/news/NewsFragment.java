@@ -17,7 +17,6 @@ import com.cnswan.juggle.activity.news.top.TopNewsFragment;
 import com.cnswan.juggle.adapter.MyFragmentPagerAdapter;
 import com.cnswan.juggle.module.rxjava.RxBus;
 import com.cnswan.juggle.module.rxjava.RxBusBaseMessage;
-import com.cnswan.juggle.module.rxjava.RxCodeConstants;
 
 import java.util.ArrayList;
 
@@ -76,7 +75,7 @@ public class NewsFragment extends Fragment {
 
     //TODO:需要注意的是:避免内存泄露;
     private void initRxBus() {
-        RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TO_SUB, RxBusBaseMessage.class)
+        RxBus.getDefault().toFlowable(RxBusBaseMessage.class)
                 .subscribe(new Consumer<RxBusBaseMessage>() {
                     @Override
                     public void accept(RxBusBaseMessage rxBusBaseMessage) throws Exception {

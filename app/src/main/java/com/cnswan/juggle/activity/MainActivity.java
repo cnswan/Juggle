@@ -28,14 +28,13 @@ import com.cnswan.juggle.adapter.MyFragmentPagerAdapter;
 import com.cnswan.juggle.amvp.BaseSkinActivity;
 import com.cnswan.juggle.module.rxjava.RxBus;
 import com.cnswan.juggle.module.rxjava.RxBusBaseMessage;
-import com.cnswan.juggle.module.rxjava.RxCodeConstants;
 import com.cnswan.juggle.widget.ZCircleImageView.CircleImageDrawable;
 
 import java.util.ArrayList;
 
 import io.reactivex.functions.Consumer;
 
-public class MainActivity extends BaseSkinActivity implements View.OnClickListener, ViewPager.OnPageChangeListener  {
+public class MainActivity extends BaseSkinActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private FrameLayout llTitleMenu;
 
@@ -130,7 +129,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
             case R.id.ll_title_menu:// 开启菜单
                 drawerLayout.openDrawer(GravityCompat.START);
                 // 关闭
-                //                drawerLayout.closeDrawer(GravityCompat.START);
+                // drawerLayout.closeDrawer(GravityCompat.START);
                 break;
             case R.id.iv_title_gank:// 干货栏
                 if (vpContent.getCurrentItem() != 0) {//不然cpu会有损耗
@@ -248,7 +247,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
     }
 
     private void initRxBus() {
-        RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TO_PARENT, RxBusBaseMessage.class)
+        RxBus.getDefault().toFlowable(RxBusBaseMessage.class)
                 .subscribe(new Consumer<RxBusBaseMessage>() {
                     @Override
                     public void accept(RxBusBaseMessage rxBusBaseMessage) throws Exception {

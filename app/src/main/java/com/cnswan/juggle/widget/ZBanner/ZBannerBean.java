@@ -1,11 +1,5 @@
 package com.cnswan.juggle.widget.ZBanner;
 
-/**
- * Created by zhangxin on 2017/3/22 0022.
- * <p>
- * Description :
- */
-
 public class ZBannerBean {
     private String url;
     private String title;
