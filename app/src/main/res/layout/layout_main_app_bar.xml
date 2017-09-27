@@ -47,25 +47,32 @@
 
                     <ImageView
                         android:id="@+id/iv_title_gank"
-                        android:layout_width="55dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/titlebar_disco" />
+                        android:src="@mipmap/icon_news" />
 
                     <ImageView
                         android:id="@+id/iv_title_one"
-                        android:layout_width="55dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/titlebar_music" />
+                        android:src="@mipmap/icon_movie" />
 
                     <ImageView
                         android:id="@+id/iv_title_dou"
-                        android:layout_width="55dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/titlebar_friends" />
+                        android:src="@mipmap/icon_talk" />
+
+                    <ImageView
+                        android:id="@+id/iv_title_library"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@mipmap/icon_code" />
 
                 </LinearLayout>
             </HorizontalScrollView>

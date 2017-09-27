@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.cnswan.juggle.R;
 import com.cnswan.juggle.activity.chat.ChatFragment;
+import com.cnswan.juggle.activity.library.LibraryFragment;
 import com.cnswan.juggle.activity.menu.NavAboutActivity;
 import com.cnswan.juggle.activity.menu.NavDeedBackActivity;
 import com.cnswan.juggle.activity.menu.NavSettingActivity;
@@ -104,6 +105,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
         mFragmentList.add(new NewsFragment()); //主页面
         mFragmentList.add(new PictureFragment());  //电影推荐
         mFragmentList.add(new ChatFragment()); //文艺文学
+        mFragmentList.add(new LibraryFragment());// 库页面
         // 注意使用的是：getSupportFragmentManager
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragmentList);
         vpContent.setAdapter(adapter);

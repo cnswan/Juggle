@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- 路由页面 -->
+        <activity android:name=".activity.arouter.ARouterActivity"/>
+
         <activity
             android:name=".activity.SplashActivity"
             android:label="@string/rx_android_title"/>

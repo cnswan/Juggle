@@ -47,6 +47,6 @@ public class MApplicationLike extends DefaultApplicationLike {
     @Override
     public void onCreate() {
         Log.d(TAG, "onCreate");// super.onCreate();父类无操作，省略
-        ARouterManager.initArouter(getApplication());
+        ARouterManager.initRouter(getApplication());
     }
 }

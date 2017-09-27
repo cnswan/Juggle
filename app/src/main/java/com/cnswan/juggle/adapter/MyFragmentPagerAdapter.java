@@ -7,64 +7,51 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-/** 使用的ViewPager+Fragment的架构,并为ViewPager添加了标题栏,但是没有使用懒加载技术; */
+/**
+ * 使用的ViewPager+Fragment的架构,并为ViewPager添加了标题栏,但是没有使用懒加载技术;
+ */
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private List<?> mFragment;
-    private List<String> mTitleList;
+    private List<?>      mFragments;
+    private List<String> mTitles;
 
-    /**
-     * 普通，主页使用
-     */
     public MyFragmentPagerAdapter(FragmentManager fm, List<?> mFragment) {
         super(fm);
-        this.mFragment = mFragment;
+        this.mFragments = mFragment;
     }
 
-    /**
-     * 接收首页传递的标题
-     */
-    public MyFragmentPagerAdapter(FragmentManager fm, List<?> mFragment, List<String> mTitleList) {
+    public MyFragmentPagerAdapter(FragmentManager fm, List<?> mFragment, List<String> mTitles) {
         super(fm);
-        this.mFragment = mFragment;
-        this.mTitleList = mTitleList;
+        this.mFragments = mFragment;
+        this.mTitles = mTitles;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return (Fragment) mFragment.get(position);
+        return (Fragment) mFragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return mFragment.size();
+        return mFragments.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mTitles.get(position  );
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
+        // 覆写destroyItem并且空实现,这样每个Fragment中的视图就不会被销毁
+        // super.destroyItem(container, position, object);
         super.destroyItem(container, position, object);
     }
 
-    /**
-     * 首页显示title，每日推荐等..
-     * 若有问题，移到对应单独页面
-     */
     @Override
-    public CharSequence getPageTitle(int position) {
-        if (mTitleList != null) {
-            return mTitleList.get(position);
-        } else {
-            return "";
-        }
-    }
-
-    //⊙﹏⊙b汗,暂时还没用到...
-    public void addFragmentList(List<?> fragment) {
-        this.mFragment.clear();
-        this.mFragment = null;
-        this.mFragment = fragment;
-        notifyDataSetChanged();
+    public int getItemPosition(Object object) {
+        return android.support.v4.view.PagerAdapter.POSITION_NONE;
     }
 
 }
