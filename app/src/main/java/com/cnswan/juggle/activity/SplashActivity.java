@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.cnswan.juggle.R;
+import com.cnswan.juggle.amvp.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

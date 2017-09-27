@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.cnswan.juggle.R;
 import com.cnswan.juggle.aapp.BaseBuildInfo;
 import com.cnswan.juggle.aapp.BuildInfo;
+import com.cnswan.juggle.amvp.BaseActivity;
 import com.cnswan.juggle.module.tinker.util.Utils;
 import com.tencent.tinker.lib.library.TinkerLoadLibrary;
 import com.tencent.tinker.lib.tinker.Tinker;

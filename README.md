@@ -14,6 +14,8 @@
    `参考 https://github.com/badges/shields`
    - [RxJava 笔记](https://github.com/cnswan/notes/rxjava)
    `参考 https://github.com/mcxiaoke/RxDocs`
+   - [ARouter-路由 笔记](https://github.com/cnswan/notes/arouter)
+   `参考 https://github.com/alibaba/ARouter`
 
 ### Tinker 使用说明 ###
 - 我的笔记：[Tinker使用说明](https://github.com/cnswan/juggle/tree/master/notes/tinker)

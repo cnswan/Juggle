@@ -31,7 +31,7 @@
             android:name=".activity.FlexBoxActivity"
             android:label="@string/rx_android_title"/>
         <activity
-            android:name=".activity.RxAndroidActivity"
+            android:name=".activity.rxjava.RxAndroidActivity"
             android:label="@string/rx_android_title"/>
         <activity
             android:name=".activity.TinkerActivity"

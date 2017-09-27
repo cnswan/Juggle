@@ -16,3 +16,7 @@
 #   public *;
 #}
 -keepattributes SourceFile,LineNumberTable
+
+#ARouter 混淆规则
+-keep public class com.alibaba.android.arouter.routes.**{*;}
+-keep class * implements com.alibaba.android.arouter.facade.template.ISyringe{*;}

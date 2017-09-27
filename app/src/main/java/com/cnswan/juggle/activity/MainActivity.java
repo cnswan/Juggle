@@ -38,7 +38,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
 
     private FrameLayout llTitleMenu;
 
-    private DrawerLayout   drawerLayout;
+    private DrawerLayout   mDrawerLayout;
     private NavigationView navView;
 
     Toolbar toolbar;
@@ -60,7 +60,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
     }
 
     private void initView() {
-        drawerLayout = (DrawerLayout) findViewById(R.id.main_drawer_layout);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.main_drawer_layout);
         navView = (NavigationView) findViewById(R.id.main_nav_view);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -96,9 +96,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
         llTitleGank.setOnClickListener(this);
         llTitleOne.setOnClickListener(this);
         llTitleDou.setOnClickListener(this);
-
     }
-
 
     //使用的一个Activity,多Fragment的架构;核心中的核心,使用多Fragment架构;
     private void initContentFragment() {
@@ -127,7 +125,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ll_title_menu:// 开启菜单
-                drawerLayout.openDrawer(GravityCompat.START);
+                mDrawerLayout.openDrawer(GravityCompat.START);
                 // 关闭
                 // drawerLayout.closeDrawer(GravityCompat.START);
                 break;
@@ -156,8 +154,8 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
                 }
                 break;
             case R.id.ll_nav_homepage:// 主页
-                drawerLayout.closeDrawer(GravityCompat.START);
-                drawerLayout.postDelayed(new Runnable() {
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                mDrawerLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
@@ -165,12 +163,10 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
                         startActivity(intent);
                     }
                 }, 360);
-
                 break;
-
             case R.id.ll_nav_setting://个性设置界面
-                drawerLayout.closeDrawer(GravityCompat.START);
-                drawerLayout.postDelayed(new Runnable() {
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                mDrawerLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         NavSettingActivity.start(MainActivity.this);
@@ -178,8 +174,8 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
                 }, 360);
                 break;
             case R.id.ll_nav_deedback:// 问题反馈
-                drawerLayout.closeDrawer(GravityCompat.START);
-                drawerLayout.postDelayed(new Runnable() {
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                mDrawerLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         NavDeedBackActivity.start(MainActivity.this);
@@ -187,8 +183,8 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
                 }, 360);
                 break;
             case R.id.ll_nav_about:// 关于自己
-                drawerLayout.closeDrawer(GravityCompat.START);
-                drawerLayout.postDelayed(new Runnable() {
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                mDrawerLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         NavAboutActivity.start(MainActivity.this);
@@ -196,9 +192,9 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
                 }, 360);
                 break;
             default:
-                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
                     Toast.makeText(MainActivity.this, "暂时还未完成,回收抽屉", Toast.LENGTH_LONG).show();
-                    drawerLayout.closeDrawer(GravityCompat.START);
+                    mDrawerLayout.closeDrawer(GravityCompat.START);
                 }
                 break;
         }

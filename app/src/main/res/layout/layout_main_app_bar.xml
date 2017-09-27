@@ -68,9 +68,7 @@
                         android:src="@drawable/titlebar_friends" />
 
                 </LinearLayout>
-
             </HorizontalScrollView>
-
         </android.support.v7.widget.Toolbar>
 
         <FrameLayout
