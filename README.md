@@ -10,11 +10,11 @@
 [![Version Name](https://img.shields.io/badge/Version%20Name-v1.6%20%E6%AD%A3%E5%BC%8F%E7%89%88-blue.svg)](https://github.com/cnswan)&ensp;&ensp; 
 
 ## 学习笔记
-   - [shields-徽章 笔记](https://github.com/cnswan/notes/shields)
+   - [shields-徽章 笔记](https://github.com/cnswan/Juggle/notes/shields)
    `参考 https://github.com/badges/shields`
-   - [RxJava 笔记](https://github.com/cnswan/notes/rxjava)
+   - [RxJava 笔记](https://github.com/cnswan/Juggle/notes/rxjava)
    `参考 https://github.com/mcxiaoke/RxDocs`
-   - [ARouter-路由 笔记](https://github.com/cnswan/notes/arouter)
+   - [ARouter-路由 笔记](https://github.com/cnswan/Juggle/notes/arouter)
    `参考 https://github.com/alibaba/ARouter`
 
 ### Tinker 使用说明 ###
