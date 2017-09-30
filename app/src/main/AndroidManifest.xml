@@ -26,6 +26,17 @@
         </activity>
         <!-- 路由页面 -->
         <activity android:name=".activity.arouter.ARouterActivity"/>
+        <!-- 路由页面 通过Url跳转 -->
+        <activity android:name=".activity.arouter.SchemaFilterActivity">
+            <intent-filter>
+                <data
+                    android:host="m.cnswan.com"
+                    android:scheme="arouter"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".activity.SplashActivity"

@@ -1,0 +1,48 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <!--card_view:cardElevation 	阴影的大小-->
+    <!--card_view:cardMaxElevation 	阴影最大高度-->
+    <!--card_view:cardBackgroundColor 	卡片的背景色-->
+    <!--card_view:cardCornerRadius 	卡片的圆角大小-->
+    <!--card_view:contentPadding 	卡片内容于边距的间隔-->
+    <!--card_view:contentPaddingBottom 	卡片内容与底部的边距-->
+    <!--card_view:contentPaddingTop 	卡片内容与顶部的边距-->
+    <!--card_view:contentPaddingLeft 	卡片内容与左边的边距-->
+    <!--card_view:contentPaddingRight 	卡片内容与右边的边距-->
+    <!--card_view:contentPaddingStart 	卡片内容于边距的间隔起始-->
+    <!--card_view:contentPaddingEnd 	卡片内容于边距的间隔终止-->
+    <!--card_view:cardUseCompatPadding 	设置内边距，V21+的版本和之前的版本仍旧具有一样的计算方式-->
+    <!--card_view:cardPreventConrerOverlap 	在V20和之前的版本中添加内边距，这个属性为了防止内容和边角的重叠-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_lib_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

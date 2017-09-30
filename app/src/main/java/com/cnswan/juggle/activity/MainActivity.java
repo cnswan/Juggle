@@ -48,6 +48,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
     private ImageView llTitleGank;
     private ImageView llTitleOne;
     private ImageView llTitleDou;
+    private ImageView llTitleLib;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
         llTitleGank = (ImageView) findViewById(R.id.iv_title_gank);
         llTitleOne = (ImageView) findViewById(R.id.iv_title_one);
         llTitleDou = (ImageView) findViewById(R.id.iv_title_dou);
+        llTitleLib = (ImageView) findViewById(R.id.iv_title_library);
         llTitleMenu = (FrameLayout) findViewById(R.id.ll_title_menu);
 
     }
@@ -97,6 +99,7 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
         llTitleGank.setOnClickListener(this);
         llTitleOne.setOnClickListener(this);
         llTitleDou.setOnClickListener(this);
+        llTitleLib.setOnClickListener(this);
     }
 
     //使用的一个Activity,多Fragment的架构;核心中的核心,使用多Fragment架构;
@@ -133,26 +136,22 @@ public class MainActivity extends BaseSkinActivity implements View.OnClickListen
                 break;
             case R.id.iv_title_gank:// 干货栏
                 if (vpContent.getCurrentItem() != 0) {//不然cpu会有损耗
-                    llTitleGank.setSelected(true);
-                    llTitleOne.setSelected(false);
-                    llTitleDou.setSelected(false);
                     vpContent.setCurrentItem(0);
                 }
                 break;
             case R.id.iv_title_one:// 电影栏
                 if (vpContent.getCurrentItem() != 1) {
-                    llTitleOne.setSelected(true);
-                    llTitleGank.setSelected(false);
-                    llTitleDou.setSelected(false);
                     vpContent.setCurrentItem(1);
                 }
                 break;
             case R.id.iv_title_dou:// 书籍栏
                 if (vpContent.getCurrentItem() != 2) {
-                    llTitleDou.setSelected(true);
-                    llTitleOne.setSelected(false);
-                    llTitleGank.setSelected(false);
                     vpContent.setCurrentItem(2);
+                }
+                break;
+            case R.id.iv_title_library:// 库栏
+                if (vpContent.getCurrentItem() != 3) {
+                    vpContent.setCurrentItem(3);
                 }
                 break;
             case R.id.ll_nav_homepage:// 主页
