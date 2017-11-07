@@ -12,54 +12,41 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-        android:name=".aapp.MApplication"
+        android:name=".amvp.JApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity">
+            android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <!-- 路由页面 -->
-        <activity android:name=".activity.arouter.ARouterActivity"/>
+        <activity android:name=".ui.activity.ARouterActivity"/>
+        <activity android:name=".ui.activity.ARouterJumpActivity"/>
         <!-- 路由页面 通过Url跳转 -->
-        <activity android:name=".activity.arouter.SchemaFilterActivity">
+        <activity android:name=".ui.activity.ARouterSchemaFilterActivity">
             <intent-filter>
                 <data
                     android:host="m.cnswan.com"
                     android:scheme="arouter"/>
                 <action android:name="android.intent.action.VIEW"/>
+
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.WebViewActivity"/>
 
         <activity
-            android:name=".activity.SplashActivity"
-            android:label="@string/rx_android_title"/>
+            android:name=".ui.activity.SplashActivity"/>
         <activity
-            android:name=".activity.FlexBoxActivity"
-            android:label="@string/rx_android_title"/>
+            android:name=".ui.activity.FlexBoxActivity"/>
         <activity
-            android:name=".activity.rxjava.RxAndroidActivity"
-            android:label="@string/rx_android_title"/>
-        <activity
-            android:name=".activity.TinkerActivity"
-            android:label="@string/tinker_title"/>
-        <activity android:name=".activity.HistoryToday.HistoryTodayActivity"/>
-        <activity android:name=".activity.WebViewActivity"/>
-        <activity android:name=".activity.picture.DetailPictureActivity"/>
-        <activity android:name=".activity.menu.NavDeedBackActivity"/>
-        <activity android:name=".activity.menu.NavAboutActivity"/>
-        <activity android:name=".activity.menu.NavSettingActivity"/>
-        <activity android:name=".activity.news.movie.detail.MovieDetailActivity"/>
-        <activity android:name=".activity.news.top.detail.TopNewsDetailActivity"/>
-
-        <service android:name=".service.SampleResultService"/>
+            android:name=".ui.activity.RxAndroidActivity"/>
     </application>
 
 </manifest>

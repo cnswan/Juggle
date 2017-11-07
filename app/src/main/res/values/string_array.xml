@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="libraries">
+        <item>CoordinatorLayout|Google material design</item>
+        <item>RxJava|基于观察者模式的编程框架</item>
+        <item>ARouter|Alibaba 开源的一款 Android 页面路由框架</item>
+        <item>FlexBox|Google</item>
+        <item>ButterKnife|黄油刀</item>
+        <item>Glide|图片加载库</item>
+        <item>DiskLruCache|缓存框架</item>
+        <item>View|自定义View集合，自己撸严格复习知识点</item>
+    </string-array>
+
+</resources>

@@ -8,7 +8,7 @@
 
     <!--主体内容区域-->
     <include
-        layout="@layout/layout_main_app_bar"
+        layout="@layout/activity_main_app_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
@@ -18,13 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@drawable/skin_main_bg"
-        android:clickable="true"
+        android:background="@color/colorGray"
         android:fitsSystemWindows="true"/>
-    <!-- android:background="@color/colorPageBg"-->
 
-
-    <!--不在这里初始化了,改在代码中进行初始化-->
-    <!--app:headerLayout="@layout/nav_header_main"-->
-    <!--app:menu="@menu/activity_main_drawer"-->
 </android.support.v4.widget.DrawerLayout>

@@ -1,47 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#0066CC</color>
+    <color name="colorPrimaryDark">#003366</color>
+    <color name="colorAccent">#666666</color>
+
     <color name="colorWhite">#ffffffff</color>
-    <!--页面背景的颜色-->
-    <color name="colorPageBg">#f2f4f5</color>
-
-    <!--透明色-->
-    <color name="colorTransparent">#00000000</color>
-
-    <!--半透明色-->
-    <color name="halfcolorTransparent">#1f000000</color>
-
-    <!--item的5.0一下版本选择器颜色-->
-    <color name="itemLowBackground">#d9d9d9</color>
-    <!--正文文字颜色-->
-    <color name="colorContent">#ff333333</color>
-
-    <!--tab标签栏文字的颜色-->
-    <color name="colorTabText">#585858</color>
-
-    <color name="colorTitle">#666</color>
-
-    <!--首页item文字颜色-->
-    <color name="colorSubtitle">#999</color>
-
-    <color name="cycle_image_bg">#44222222</color>
-
-    <!--首页分割线-->
-    <color name="colorHomeLine">#D4D4D4</color>
-
-    <color name="text_color">#f6000000</color>
-    <color name="text_source">#732b2828</color>
-    <color name="content_placeholder">#ffe0e0e0</color>
-    <color name="text_common">#191919</color>
-
-    <color name="skin_item_text_color">#191919</color>
-
-
-    <!--电影评分-->
-    <color name="colorRateRed">#FB5B81</color>
-
-    <!--水波纹或5.0以下选择器颜色-->
-    <color name="tabBackground">#777D7D7D</color>
+    <color name="colorGreen">#ff669900</color>
+    <color name="colorGray">#ffcccccc</color>
+    <color name="colorBlack">#ff000000</color>
 </resources>

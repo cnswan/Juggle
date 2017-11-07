@@ -1,11 +1,11 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/colorPrimary"
     app:cardCornerRadius="10dp"
-    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
 
     <!--card_view:cardElevation 	阴影的大小-->
@@ -23,26 +23,52 @@
     <!--card_view:cardPreventConrerOverlap 	在V20和之前的版本中添加内边距，这个属性为了防止内容和边角的重叠-->
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:padding="10dp">
 
         <ImageView
+            android:id="@+id/iv_lib_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
             android:src="@mipmap/ic_launcher"/>
 
-        <TextView
-            android:id="@+id/tv_lib_name"
-            android:layout_width="wrap_content"
+        <Space
+            android:layout_width="5dp"
             android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_lib_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="name:"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_lib_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="desc:"/>
+        </LinearLayout>
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_navigate_next_black_24dp"/>
 
 </android.support.v7.widget.CardView>
