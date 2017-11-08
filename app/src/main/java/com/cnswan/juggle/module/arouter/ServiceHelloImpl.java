@@ -10,7 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
  * Created by cnswan on 2017/11/8.
  */
 
-@Route(path = "service/router/hello")
+@Route(path = "/service/router/hello")
 public class ServiceHelloImpl implements ServiceHello {
 
     private Context mContext;
