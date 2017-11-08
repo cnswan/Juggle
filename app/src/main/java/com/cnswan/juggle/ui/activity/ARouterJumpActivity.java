@@ -72,6 +72,7 @@ public class ARouterJumpActivity extends ManagedActivity implements View.OnClick
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_arouter_jump);
         ARouter.getInstance().inject(this);// inject [ɪn'dʒekt] 注入
         // No more getter ...
         // name = getIntent().getStringExtra("name");
