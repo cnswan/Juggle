@@ -101,6 +101,7 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,6 +137,13 @@
                         android:layout_height="wrap_content"
                         android:onClick="onClick"
                         android:text="@string/arouter_advance_option_interceptor"/>
+
+                    <Button
+                        android:id="@+id/btn_arouter_option_inject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:text="@string/arouter_advance_option_inject"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

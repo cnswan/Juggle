@@ -21,6 +21,7 @@
     <string name="arouter_advance_option">进阶用法（请先初始化）</string>
     <string name="arouter_advance_option_url">通过URL跳转</string>
     <string name="arouter_advance_option_interceptor">拦截器测试</string>
+    <string name="arouter_advance_option_inject">依赖注入（参照代码）</string>
 
 
 </resources>
