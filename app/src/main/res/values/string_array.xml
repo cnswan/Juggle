@@ -5,7 +5,7 @@
         <item>CoordinatorLayout|Google material design</item>
         <item>RxJava|基于观察者模式的编程框架</item>
         <item>ARouter|Alibaba 开源的一款 Android 页面路由框架</item>
-        <item>FlexBox|Google</item>
+        <item>FlexBox|FlexboxLayout是一个Android平台上与CSS的 Flexible box 布局模块有相似功能的库</item>
         <item>ButterKnife|黄油刀</item>
         <item>Glide|图片加载库</item>
         <item>DiskLruCache|缓存框架</item>

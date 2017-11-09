@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_flex_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="80dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <!-- NestedScrollView里设置你的底部表长什么样的-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/remove_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/ic_remove_white_24dp"/>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/add_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/ic_add_white_24dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="underlying implementation"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/radiogroup_container_implementation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:alignContent="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_viewgroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="viewgroup"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_recyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="recyclerview"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Flex Direction"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/radiogroup_container_flex_direction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:alignContent="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_flex_direction_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Row"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_flex_direction_row_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Row Reverse"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_flex_direction_column"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Column"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_flex_direction_column_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Column Reverse"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Flex Wrap"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/radiogroup_container_flex_wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:alignContent="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_nowrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NoWrap"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Wrap"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_wrap_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reverse"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Justify Content"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/radiogroup_container_justify_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:alignContent="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_justify_content_flex_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Flex Start"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_justify_content_flex_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flex End"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_justify_content_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Center"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_justify_content_space_between"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Space Between"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_justify_content_space_around"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Space Around"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Align Items"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/radiogroup_container_align_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:alignContent="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_items_flex_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Flex Start"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_items_flex_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flex End"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_items_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Center"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_items_baseline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BaseLine"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_items_stretch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stretch"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Align Content"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/radiogroup_container_align_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:alignContent="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_content_flex_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Flex Start"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_content_flex_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flex End"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_content_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Center"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_content_space_between"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Space Between"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_content_space_around"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Space Around"/>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_align_content_stretch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stretch"/>
+            </com.google.android.flexbox.FlexboxLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
