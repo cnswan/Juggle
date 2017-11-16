@@ -20,3 +20,12 @@
 #ARouter 混淆规则
 -keep public class com.alibaba.android.arouter.routes.**{*;}
 -keep class * implements com.alibaba.android.arouter.facade.template.ISyringe{*;}
+
+#VLayout 混淆规则
+-keepattributes InnerClasses
+-keep class com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx { *; }
+-keep class android.support.v7.widget.RecyclerView$LayoutParams { *; }
+-keep class android.support.v7.widget.RecyclerView$ViewHolder { *; }
+-keep class android.support.v7.widget.ChildHelper { *; }
+-keep class android.support.v7.widget.ChildHelper$Bucket { *; }
+-keep class android.support.v7.widget.RecyclerView$LayoutManager { *; }

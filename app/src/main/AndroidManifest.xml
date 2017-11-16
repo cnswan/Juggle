@@ -46,6 +46,8 @@
         <activity
             android:name=".ui.activity.FlexBoxActivity"/>
         <activity
+            android:name=".ui.activity.VLayoutActivity"/>
+        <activity
             android:name=".ui.activity.RxAndroidActivity"/>
     </application>
 

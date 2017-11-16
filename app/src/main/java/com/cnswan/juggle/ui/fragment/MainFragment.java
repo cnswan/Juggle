@@ -16,6 +16,7 @@ import com.cnswan.juggle.R;
 import com.cnswan.juggle.bean.Library;
 import com.cnswan.juggle.ui.activity.ARouterActivity;
 import com.cnswan.juggle.ui.activity.FlexBoxActivity;
+import com.cnswan.juggle.ui.activity.VLayoutActivity;
 import com.cnswan.juggle.ui.adapter.MainListAdapter;
 
 import java.util.ArrayList;
@@ -66,6 +67,9 @@ public class MainFragment extends Fragment {
                         break;
                     case "FlexBox":
                         ARouter.getInstance().build(FlexBoxActivity.ACT_PATH).navigation();
+                        break;
+                    case "VLayout":
+                        ARouter.getInstance().build(VLayoutActivity.ACT_PATH).navigation();
                         break;
                     case "ButterKnife":
                         break;
