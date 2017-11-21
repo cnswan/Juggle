@@ -49,6 +49,8 @@
             android:name=".ui.activity.VLayoutActivity"/>
         <activity
             android:name=".ui.activity.RxAndroidActivity"/>
+        <activity
+            android:name=".ui.activity.ViewActivity"/>
     </application>
 
 </manifest>

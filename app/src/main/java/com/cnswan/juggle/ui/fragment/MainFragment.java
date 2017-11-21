@@ -17,6 +17,7 @@ import com.cnswan.juggle.bean.Library;
 import com.cnswan.juggle.ui.activity.ARouterActivity;
 import com.cnswan.juggle.ui.activity.FlexBoxActivity;
 import com.cnswan.juggle.ui.activity.VLayoutActivity;
+import com.cnswan.juggle.ui.activity.ViewActivity;
 import com.cnswan.juggle.ui.adapter.MainListAdapter;
 
 import java.util.ArrayList;
@@ -78,6 +79,7 @@ public class MainFragment extends Fragment {
                     case "DiskLruCache":
                         break;
                     case "View":
+                        ARouter.getInstance().build(ViewActivity.ACT_PATH).navigation();
                         break;
                     default:
                         break;
