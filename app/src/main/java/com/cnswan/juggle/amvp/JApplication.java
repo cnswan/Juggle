@@ -1,9 +1,9 @@
 package com.cnswan.juggle.amvp;
 
-import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 import com.cnswan.juggle.manager.ARouterManager;
 
@@ -11,9 +11,8 @@ import com.cnswan.juggle.manager.ARouterManager;
  * Created by cnswan on 2017/11/1.
  */
 
-public class JApplication extends Application {
+public class JApplication extends MultiDexApplication {
 
-    @SuppressLint("StaticFieldLeak")
     private static Application instance;
 
     public JApplication() {
